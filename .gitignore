@@ -7,3 +7,8 @@ dist-ssr
 node_modules
 .idea/
 *.log
+marketing/struk.jsonl
+marketing/offers.local.json
+*.local.json
+.sar_api_key
+session_vault.json
