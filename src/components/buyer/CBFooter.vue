@@ -48,9 +48,9 @@ const { t } = useI18n()
         </h3>
         <span class="absolute bg-[#EE4D2D] w-15 h-0.5" />
         <ul>
-          <li><a href="/juridicals/privacy_policy">{{ t('footer.privacy policy') }}</a></li>
-          <li><a href="/juridicals/term_of_service">{{ t('footer.term of service') }}</a></li>
-          <li><a href="/juridicals/service_requirement">{{ t('footer.service requirement') }}</a></li>
+          <li><a href="#">{{ t('footer.privacy policy') }}</a></li>
+          <li><a href="#">{{ t('footer.term of service') }}</a></li>
+          <li><a href="#">{{ t('footer.service requirement') }}</a></li>
           <li><a href="">{{ t('footer.best sales') }}</a></li>
           <li><a href="/buyer/login">{{ t('footer.login') }}</a></li>
           <li><a href="/buyer/account/dashboard">{{ t('footer.my account') }}</a></li>

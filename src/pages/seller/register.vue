@@ -43,7 +43,7 @@ useHead({
           </Router-Link>
 
           <small class="pt-5 block font-medium text-xs text-[#bbb]">By clicking the button, you are agreeing to our
-            <a href="/juridicals/term_of_service" class="text-[#ff7a7a]">Terms and Services</a></small>
+            <a href="#" class="text-[#ff7a7a]">Terms and Services</a></small>
         </form>
       </div>
     </div>
