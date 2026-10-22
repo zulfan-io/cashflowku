@@ -5,7 +5,7 @@ meta:
 
 <script setup>
 useHead({
-  title: 'e-shopee | welcome',
+  title: 'Pasar Kilat | welcome',
 })
 const { t, availableLocales, locale } = useI18n()
 
@@ -76,7 +76,7 @@ const toggleLocales = () => {
             </a>
           </li>
           <li>
-            <a href="https://play.google.com/store/apps/details?id=com.shopee.vn&referrer=af_tranid%3Drsx9V4J79OX3NH5LwyqLcw%26pid%3DOrganicA%26c%3Dlp_home_and1" target="_blank">
+            <a href="#" target="_blank">
               <img src="/img/index/google_play.png" alt="google_play" class="w-60 h-18">
             </a>
           </li>
