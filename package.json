@@ -1,19 +1,19 @@
 {
-    "name": "e-shopee",
+    "name": "cashflowku",
     "version": "2.3.0",
     "description": "Online shopping application and e-commerce trading platform real-time",
     "keywords": [
-        "e-shopee",
+        "cashflowku",
         "commercial",
         "shopping"
     ],
-    "homepage": "https://github.com/thuongtruong1009/e-shopee#readme",
+    "homepage": "https://github.com/zulfan-io/cashflowku#readme",
     "bugs": {
-        "url": "https://github.com/thuongtruong1009/e-shopee/issues"
+        "url": "https://github.com/zulfan-io/cashflowku/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/thuongtruong1009/e-shopee"
+        "url": "git+https://github.com/zulfan-io/cashflowku"
     },
     "funding": "https://paypal.me/thuongtruong1009",
     "license": "MIT",
