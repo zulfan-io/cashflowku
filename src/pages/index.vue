@@ -88,7 +88,7 @@ const toggleLocales = () => {
         </ul>
       </div>
       <div>
-        <img src="/img/index/hand_phone.png" alt="app_mobile">
+        <video src="/img/gen/swipe-hero.webm" autoplay muted loop playsinline aria-label="Pasar Kilat flash sale" class="max-w-full h-auto"></video>
       </div>
     </main>
     <section class="index-services p-5">
