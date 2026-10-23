@@ -5,7 +5,7 @@ meta:
 
 <script setup>
 useHead({
-  title: 'Pasar Kilat | welcome',
+  title: 'shoper | welcome',
 })
 const { t, availableLocales, locale } = useI18n()
 
@@ -60,7 +60,7 @@ const toggleLocales = () => {
       <div class="grid content-center gap-5">
         <div>
           <h1 class="text-6xl font-semibold">
-            {{ t('index.exploring') }} Pasar Kilat!
+            {{ t('index.exploring') }} shoper!
           </h1>
           <h3 class="text-3xl font-medium my-3">
             {{ t('index.banner-desc') }}.
@@ -88,7 +88,7 @@ const toggleLocales = () => {
         </ul>
       </div>
       <div>
-        <video src="/img/gen/swipe-hero.webm" autoplay muted loop playsinline aria-label="Pasar Kilat flash sale" class="max-w-full h-auto"></video>
+        <video src="/img/gen/swipe-hero.webm" autoplay muted loop playsinline aria-label="shoper flash sale" class="max-w-full h-auto"></video>
       </div>
     </main>
     <section class="index-services p-5">
@@ -140,7 +140,7 @@ const toggleLocales = () => {
         </div>
         <div class="grid content-center">
           <h1>e-shoppe</h1>
-          <h5>Pasar Kilat! {{ t('index.advertisement-1-desc') }}.</h5>
+          <h5>shoper! {{ t('index.advertisement-1-desc') }}.</h5>
         </div>
       </div>
 
@@ -204,7 +204,7 @@ const toggleLocales = () => {
       </div>
     </section>
     <footer class="text-center text-gray-400 py-3">
-      <p>{{ t('index.copyright') }} @{{ new Date().getFullYear() }} Pasar Kilat. {{ t('index.all-rights-reserved') }}.</p>
+      <p>{{ t('index.copyright') }} @{{ new Date().getFullYear() }} shoper. {{ t('index.all-rights-reserved') }}.</p>
     </footer>
   </div>
 </template>
