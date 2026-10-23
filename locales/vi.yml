@@ -20,7 +20,7 @@ ctoday:
   see-more: Xem thêm
   decrease: GIẢM BỚT
 cmonthsale: 
-  download: Tải xuống ứng dụng E-Shopee để nhận quà ngay từ chúng tôi
+  download: Tải xuống ứng dụng shoper để nhận quà ngay từ chúng tôi
   get-gift: Nhận quà tặng và giao dịch độc quyền ngay bây giờ
 carrival: 
   our-products: Sản phẩm của chúng tôi
@@ -156,7 +156,7 @@ service:
   chat-desc: Chia sẻ trao đổi với người bán
 auth: 
   a-banner: Quản trị viên chuyên nghiệp
-  a-desc: Quản lý cửa hàng của bạn hiệu quả hơn và trực quan hóa trên e-shopee với kênh quản trị
+  a-desc: Quản lý cửa hàng của bạn hiệu quả hơn và trực quan hóa trên shoper với kênh quản trị
   a-title: Đăng nhập vào kênh quản trị
   a-remember: Nhớ tôi
   a-login: Đăng nhập
@@ -439,15 +439,15 @@ index:
   chat-feature: tính năng
   chat-desc: Trò chuyện trực tiếp với người bán để có thêm lời khuyên sản phẩm. Bạn cũng có thể thương lượng giá mong muốn với người bán thông qua phần "trò chuyện"
   guarantee-privacy: Đảm bảo quyền riêng tư
-  commit: Shopee cam kết rằng số tiền bạn trả sẽ được chuyển cho người bán sau khi bạn nhận được hàng hóa. Chúng tôi luôn bảo vệ bạn
+  commit: Shoper cam kết rằng số tiền bạn trả sẽ được chuyển cho người bán sau khi bạn nhận được hàng hóa. Chúng tôi luôn bảo vệ bạn
   advertisement-1-desc: Nơi để sở hữu tất cả các sản phẩm bạn yêu thích
   advertisement-2-title: Mua và bán trực tuyến
   advertisement-2-desc: Thích mua sắm và kinh doanh với uy tín
   advertisement-3-title: Quà tặng cho khách hàng mới
-  advertisement-3-desc: Quà tặng độc quyền và hấp dẫn cho khách hàng mới tại E-Shopee
-  customer-opinion-title: Người dùng nói gì về e-shopee
-  opinion-1: Tôi luôn mong chờ E-Shopee để săn lùng các giao dịch và luôn nhận được những giao dịch tốt đáng ngạc nhiên. Không đề cập đến mọi thỏa thuận săn bắn là niềm vui, cuộc săn thỏa thuận cuối cùng là niềm vui nhất trong 2 năm nghiện e-shopee của tôi
-  opinion-2: Mỗi lần tôi đến E-Shopee, tôi có kết quả tuyệt vời, hàng chục vật phẩm tiếp tục nhận cho đến khi tôi nhận được hàng hóa, tôi thậm chí không biết khi tôi đặt hàng này hay điều đó. Vì vậy, nghiện e-shopee
+  advertisement-3-desc: Quà tặng độc quyền và hấp dẫn cho khách hàng mới tại shoper
+  customer-opinion-title: Người dùng nói gì về shoper
+  opinion-1: Tôi luôn mong chờ shoper để săn lùng các giao dịch và luôn nhận được những giao dịch tốt đáng ngạc nhiên. Không đề cập đến mọi thỏa thuận săn bắn là niềm vui, cuộc săn thỏa thuận cuối cùng là niềm vui nhất trong 2 năm nghiện shoper của tôi
+  opinion-2: Mỗi lần tôi đến shoper, tôi có kết quả tuyệt vời, hàng chục vật phẩm tiếp tục nhận cho đến khi tôi nhận được hàng hóa, tôi thậm chí không biết khi tôi đặt hàng này hay điều đó. Vì vậy, nghiện shoper
   joined-at: Tham gia tại
   copyright: Bản quyền
   all-rights-reserved: Đã đăng ký Bản quyền
@@ -476,11 +476,11 @@ favourite:
 about: 
   about-us: Về chúng tôi
   welcome: Chào mừng bạn đến
-  desc-one: E-Shopee là nền tảng thương mại điện tử lớn nhất ở Đông Nam Á và Đài Loan. Nó là một nền tảng phù hợp với khu vực, giúp mua sắm trực tuyến trở nên dễ dàng, an toàn và nhanh chóng thông qua việc thanh toán mạnh mẽ và hỗ trợ hậu cần. Shopee được hỗ trợ mạnh mẽ bởi SEA (trước đây gọi là Garena), nhà cung cấp nền tảng Internet lớn nhất Đông Nam Á.
-  desc-two: Shopee có thể được tải xuống miễn phí trên App Store và Google Play tại Singapore, Malaysia, Thái Lan, Đài Loan, Indonesia, Việt Nam và Philippines. Để biết thêm thông tin, vui lòng truy cập https://shopee.vn
+  desc-one: shoper là nền tảng thương mại điện tử lớn nhất ở Đông Nam Á và Đài Loan. Nó là một nền tảng phù hợp với khu vực, giúp mua sắm trực tuyến trở nên dễ dàng, an toàn và nhanh chóng thông qua việc thanh toán mạnh mẽ và hỗ trợ hậu cần. Shoper được hỗ trợ mạnh mẽ bởi SEA (trước đây gọi là Garena), nhà cung cấp nền tảng Internet lớn nhất Đông Nam Á.
+  desc-two: Shoper có thể được tải xuống miễn phí trên App Store và Google Play tại Singapore, Malaysia, Thái Lan, Đài Loan, Indonesia, Việt Nam và Philippines. Để biết thêm thông tin, vui lòng truy cập https://shoper.vn
   our-purpose: Mục đích của chúng tôi
-  purpose-desc: Nhóm Shopee tin vào sức mạnh biến đổi của công nghệ và muốn thay đổi thế giới tốt hơn bằng cách cung cấp một nền tảng để kết nối người mua và người bán trong một cộng đồng. Khi mua sắm trên thiết bị di động trở thành tiêu chuẩn mới, Shopee nhằm mục đích liên tục nâng cao nền tảng của mình để mang lại trải nghiệm mua sắm liền mạch và thú vị cho tất cả người dùng và là nền tảng thương mại điện tử của khu vực.
+  purpose-desc: Nhóm Shoper tin vào sức mạnh biến đổi của công nghệ và muốn thay đổi thế giới tốt hơn bằng cách cung cấp một nền tảng để kết nối người mua và người bán trong một cộng đồng. Khi mua sắm trên thiết bị di động trở thành tiêu chuẩn mới, Shoper nhằm mục đích liên tục nâng cao nền tảng của mình để mang lại trải nghiệm mua sắm liền mạch và thú vị cho tất cả người dùng và là nền tảng thương mại điện tử của khu vực.
   our-team: Đội ngũ của chúng tôi
-  team-desc: Nhóm Shopee tin vào sức mạnh biến đổi của công nghệ và muốn thay đổi thế giới tốt hơn bằng cách cung cấp một nền tảng để kết nối người mua và người bán trong một cộng đồng. Khi mua sắm trên thiết bị di động trở thành tiêu chuẩn mới, Shopee nhằm mục đích liên tục nâng cao nền tảng của mình để mang lại trải nghiệm mua sắm liền mạch và thú vị cho tất cả người dùng và là nền tảng thương mại điện tử của khu vực.
+  team-desc: Nhóm Shoper tin vào sức mạnh biến đổi của công nghệ và muốn thay đổi thế giới tốt hơn bằng cách cung cấp một nền tảng để kết nối người mua và người bán trong một cộng đồng. Khi mua sắm trên thiết bị di động trở thành tiêu chuẩn mới, Shoper nhằm mục đích liên tục nâng cao nền tảng của mình để mang lại trải nghiệm mua sắm liền mạch và thú vị cho tất cả người dùng và là nền tảng thương mại điện tử của khu vực.
   testimonial: Chứng thực
-  testimonial-desc: Nhóm Shopee tin vào sức mạnh biến đổi của công nghệ và muốn thay đổi thế giới tốt hơn bằng cách cung cấp một nền tảng để kết nối người mua và người bán trong một cộng đồng. Khi mua sắm trên thiết bị di động trở thành tiêu chuẩn mới, Shopee nhằm mục đích liên tục nâng cao nền tảng của mình để mang lại trải nghiệm mua sắm liền mạch và thú vị cho tất cả người dùng và là nền tảng thương mại điện tử của khu vực.
+  testimonial-desc: Nhóm Shoper tin vào sức mạnh biến đổi của công nghệ và muốn thay đổi thế giới tốt hơn bằng cách cung cấp một nền tảng để kết nối người mua và người bán trong một cộng đồng. Khi mua sắm trên thiết bị di động trở thành tiêu chuẩn mới, Shoper nhằm mục đích liên tục nâng cao nền tảng của mình để mang lại trải nghiệm mua sắm liền mạch và thú vị cho tất cả người dùng và là nền tảng thương mại điện tử của khu vực.

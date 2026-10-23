@@ -20,7 +20,7 @@ ctoday:
   see-more: Mehr sehen
   decrease: ABNAHME
 cmonthsale: 
-  download: Laden Sie die E-Shopee-App herunter, um sofort Geschenke von uns zu erhalten
+  download: Laden Sie die shoper-App herunter, um sofort Geschenke von uns zu erhalten
   get-gift: Holen Sie sich jetzt Geschenke und exklusive Angebote
 carrival: 
   our-products: Unsere Produkte
@@ -156,7 +156,7 @@ service:
   chat-desc: Aktienaustausch mit Verkäufer
 auth: 
   a-banner: Professioneller Administrator
-  a-desc: Verwalten Sie Ihren Shop effektiver und Visualisierung auf E-Shopee mit dem Administratorkanal
+  a-desc: Verwalten Sie Ihren Shop effektiver und Visualisierung auf shoper mit dem Administratorkanal
   a-title: Melden Sie sich beim Administratorkanal an
   a-remember: Mich erinnern
   a-login: Anmeldung
@@ -439,15 +439,15 @@ index:
   chat-feature: Merkmal
   chat-desc: Chatten Sie direkt mit dem Verkäufer, um mehr Produktberatung zu erhalten. Sie können auch den gewünschten Preis mit dem Verkäufer über den Abschnitt "Chat" aushandeln
   guarantee-privacy: Privatsphäre garantieren
-  commit: Shopee verpflichtet, dass der Betrag, den Sie zahlen, nach Erhalt der Ware an den Verkäufer übertragen wird. Wir beschützen Sie immer
+  commit: Shoper verpflichtet, dass der Betrag, den Sie zahlen, nach Erhalt der Ware an den Verkäufer übertragen wird. Wir beschützen Sie immer
   advertisement-1-desc: Der Ort, um alle Produkte zu besitzen, die Sie lieben
   advertisement-2-title: Online kaufen und verkaufen
   advertisement-2-desc: Viel Spaß beim Einkaufen und Geschäfte mit Prestige
   advertisement-3-title: Geschenke für neue Kunden
-  advertisement-3-desc: Exklusive und attraktive Geschenke für neue Kunden bei E-Shopee
-  customer-opinion-title: Was sagen Benutzer über E-Shopee
-  opinion-1: Ich freue mich immer auf E-Shopee, um nach Angeboten zu suchen und immer überraschend gute Angebote zu bekommen. Ganz zu schweigen von jeder Deal-Jagd macht Spaß, die letzte Deal-Jagd macht am meisten Spaß in meinen 2 Jahren E-Shopee-Sucht
-  opinion-2: Jedes Mal, wenn ich zum E-Shopee gehe, habe ich großartige Ergebnisse, Dutzende von Artikeln holen immer wieder auf, bis ich die Ware erhalte. Ich weiß nicht einmal, wann ich dies oder jenes bestellt habe. So süchtig nach E-Shopee
+  advertisement-3-desc: Exklusive und attraktive Geschenke für neue Kunden bei shoper
+  customer-opinion-title: Was sagen Benutzer über shoper
+  opinion-1: Ich freue mich immer auf shoper, um nach Angeboten zu suchen und immer überraschend gute Angebote zu bekommen. Ganz zu schweigen von jeder Deal-Jagd macht Spaß, die letzte Deal-Jagd macht am meisten Spaß in meinen 2 Jahren shoper-Sucht
+  opinion-2: Jedes Mal, wenn ich zum shoper gehe, habe ich großartige Ergebnisse, Dutzende von Artikeln holen immer wieder auf, bis ich die Ware erhalte. Ich weiß nicht einmal, wann ich dies oder jenes bestellt habe. So süchtig nach shoper
   joined-at: Beigetreten bei
   copyright: Urheberrechte ©
   all-rights-reserved: Alle Rechte vorbehalten
@@ -476,11 +476,11 @@ favourite:
 about: 
   about-us: Über uns
   welcome: Willkommen zu
-  desc-one: E-Shopee ist die größte E-Commerce-Plattform in Südostasien und Taiwan. Es ist eine Plattform, die auf die Region zugeschnitten ist und die Online -Einkäufe durch ihre starke Zahlung und logistische Unterstützung einfach, sicher und schnell macht. Shopee wird stark von Sea (früher bekannt als Garena), dem größten Internet -Plattformanbieter in Südostasien, unterstützt.
-  desc-two: Shopee kann kostenlos im App Store und Google Play in Singapur, Malaysia, Thailand, Taiwan, Indonesien, Vietnam und den Philippinen heruntergeladen werden. Weitere Informationen finden Sie unter https://shopee.vn
+  desc-one: shoper ist die größte E-Commerce-Plattform in Südostasien und Taiwan. Es ist eine Plattform, die auf die Region zugeschnitten ist und die Online -Einkäufe durch ihre starke Zahlung und logistische Unterstützung einfach, sicher und schnell macht. Shoper wird stark von Sea (früher bekannt als Garena), dem größten Internet -Plattformanbieter in Südostasien, unterstützt.
+  desc-two: Shoper kann kostenlos im App Store und Google Play in Singapur, Malaysia, Thailand, Taiwan, Indonesien, Vietnam und den Philippinen heruntergeladen werden. Weitere Informationen finden Sie unter https://shoper.vn
   our-purpose: Unser Zweck
-  purpose-desc: Das Shopee -Team glaubt an die transformative Kraft der Technologie und möchte die Welt zum Besseren verändern, indem sie eine Plattform zur Verbindung von Käufern und Verkäufern in einer Community bietet. Da einkaufen auf mobilen Geräten zur neuen Norm wird, möchte Shopee seine Plattform kontinuierlich verbessern, um allen Benutzern ein nahtloses und angenehmes Einkaufserlebnis zu bieten und die E-Commerce-Plattform der Region zu sein.
+  purpose-desc: Das Shoper -Team glaubt an die transformative Kraft der Technologie und möchte die Welt zum Besseren verändern, indem sie eine Plattform zur Verbindung von Käufern und Verkäufern in einer Community bietet. Da einkaufen auf mobilen Geräten zur neuen Norm wird, möchte Shoper seine Plattform kontinuierlich verbessern, um allen Benutzern ein nahtloses und angenehmes Einkaufserlebnis zu bieten und die E-Commerce-Plattform der Region zu sein.
   our-team: Unser Team
-  team-desc: Das Shopee -Team glaubt an die transformative Kraft der Technologie und möchte die Welt zum Besseren verändern, indem sie eine Plattform zur Verbindung von Käufern und Verkäufern in einer Community bietet. Da einkaufen auf mobilen Geräten zur neuen Norm wird, möchte Shopee seine Plattform kontinuierlich verbessern, um allen Benutzern ein nahtloses und angenehmes Einkaufserlebnis zu bieten und die E-Commerce-Plattform der Region zu sein.
+  team-desc: Das Shoper -Team glaubt an die transformative Kraft der Technologie und möchte die Welt zum Besseren verändern, indem sie eine Plattform zur Verbindung von Käufern und Verkäufern in einer Community bietet. Da einkaufen auf mobilen Geräten zur neuen Norm wird, möchte Shoper seine Plattform kontinuierlich verbessern, um allen Benutzern ein nahtloses und angenehmes Einkaufserlebnis zu bieten und die E-Commerce-Plattform der Region zu sein.
   testimonial: Zeugnis
-  testimonial-desc: Das Shopee -Team glaubt an die transformative Kraft der Technologie und möchte die Welt zum Besseren verändern, indem sie eine Plattform zur Verbindung von Käufern und Verkäufern in einer Community bietet. Da einkaufen auf mobilen Geräten zur neuen Norm wird, möchte Shopee seine Plattform kontinuierlich verbessern, um allen Benutzern ein nahtloses und angenehmes Einkaufserlebnis zu bieten und die E-Commerce-Plattform der Region zu sein.
+  testimonial-desc: Das Shoper -Team glaubt an die transformative Kraft der Technologie und möchte die Welt zum Besseren verändern, indem sie eine Plattform zur Verbindung von Käufern und Verkäufern in einer Community bietet. Da einkaufen auf mobilen Geräten zur neuen Norm wird, möchte Shoper seine Plattform kontinuierlich verbessern, um allen Benutzern ein nahtloses und angenehmes Einkaufserlebnis zu bieten und die E-Commerce-Plattform der Region zu sein.
