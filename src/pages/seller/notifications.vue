@@ -9,8 +9,8 @@ useHead({
 })
 const notifications = reactive([{
   img: '/img/gen/notif-1.jpg',
-  title: 'Shopee Xu sắp hết hạn!!',
-  desc: 'Bạn đang có 300 Shopee Xu sẽ hết hạn vào ngày 28-02-2022. Mua hàng và sử dụng ngay nào!',
+  title: 'shoper Xu sắp hết hạn!!',
+  desc: 'Bạn đang có 300 shoper Xu sẽ hết hạn vào ngày 28-02-2022. Mua hàng và sử dụng ngay nào!',
   time: '19:00 22/02/2022',
 }, {
   img: '/img/gen/notif-2.jpg',
@@ -27,13 +27,13 @@ const notifications = reactive([{
 {
   img: '/img/gen/notif-4.jpg',
   title: 'Thu cũ đổi mới - Lên đời Samsung S22',
-  desc: 'Tạm biệt "dế" cũ - tậu ngay "dế" mới tại Shopee. ⚡ Đặc biệt từ 11.02 đến 03.03, bạn sẽ nhận ngay ưu đãi độc quyền 🌟 7.000.000đ 🌟 từ Samsung 🔥 Tham gia ngay kẻo lỡ!',
+  desc: 'Tạm biệt "dế" cũ - tậu ngay "dế" mới tại shoper. ⚡ Đặc biệt từ 11.02 đến 03.03, bạn sẽ nhận ngay ưu đãi độc quyền 🌟 7.000.000đ 🌟 từ Samsung 🔥 Tham gia ngay kẻo lỡ!',
   time: '19:00 22/02/2022',
 },
 {
   img: '/img/gen/notif-5.jpg',
   title: 'Bí quyết \"2-KHÔNG-2-CÓ\"',
-  desc: '⛔ KHÔNG NÊN: - Nhận hàng có mã đơn lạ. - Nhận quà không rõ chương trình/có thu thêm phí. 😊 NÊN: - Nhận hàng có ghi rõ mã đơn đã đặt trên Shopee. - Nhận quà từ chương trình đã tham gia. Xem bí quyết kiểm tra, nhận hàng chuẩn TẠI ĐÂY',
+  desc: '⛔ KHÔNG NÊN: - Nhận hàng có mã đơn lạ. - Nhận quà không rõ chương trình/có thu thêm phí. 😊 NÊN: - Nhận hàng có ghi rõ mã đơn đã đặt trên shoper. - Nhận quà từ chương trình đã tham gia. Xem bí quyết kiểm tra, nhận hàng chuẩn TẠI ĐÂY',
   time: '19:00 22/02/2022',
 },
 {

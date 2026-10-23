@@ -6,7 +6,7 @@ meta:
 <script setup>
 import CMap from '~/components/CMap.vue'
 useHead({
-  title: 'e-shopee | sitemap',
+  title: 'shoper | sitemap',
 })
 const { t } = useI18n()
 </script>

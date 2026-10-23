@@ -5,7 +5,7 @@ meta:
 
 <script setup>
 useHead({
-  title: 'e-shopee | about',
+  title: 'shoper | about',
 })
 const { t } = useI18n()
 </script>
@@ -20,7 +20,7 @@ const { t } = useI18n()
     <div class="grid grid-cols-2 px-10 gap-5 py-15">
       <div class="text-left">
         <h1 class="font-medium text-3xl flex items-center gap-2">
-          <IShakeHand /> {{ t('about.welcome') }} e-shopee!
+          <IShakeHand /> {{ t('about.welcome') }} shoper!
         </h1>
         <p class="my-5 dark:text-gray-400">
           {{ t('about.desc-one') }}.

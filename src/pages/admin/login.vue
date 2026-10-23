@@ -90,7 +90,7 @@ const handleSubmit = async(e) => {
           <div class="grid gap-5">
             <div class="flex justify-between text-xs pt-5">
               <p class="opacity-60">
-                Don't have a Shopee account yet?
+                Don't have a Shoper account yet?
               </p>
               <p class="text-blue-600 hover:text-blue-800 font-medium cursor-pointer">
                 Create account

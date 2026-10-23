@@ -282,7 +282,7 @@ const onvisitShop = () => {
       <div class="flex justify-center items-center gap-5">
         <div class="flex items-center gap-1">
           <img src="/img/gen/insurance.png" alt="insurance_icon" class="max-w-4 max-h-4">
-          <p>e-shopee {{ t('product.insurance') }}</p>
+          <p>shoper {{ t('product.insurance') }}</p>
         </div>
         <div class="capitalize text-gray-500 text-sm">
           <p>3 {{ t('product.return-refund') }}</p>
@@ -356,7 +356,7 @@ const onvisitShop = () => {
     <div>
       <label>{{ t('product.category') }}</label>
       <div class="text-[#0055BD] cursor-pointer font-medium flex">
-        e-shopee >
+        shoper >
         <div v-if="productResponseData.attributes" class="flex gap-7">
           <p v-for="(attr, i) in productResponseData.attributes" :key="i">
             {{ attr.name }} > {{ attr.value }}

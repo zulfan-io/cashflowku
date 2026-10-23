@@ -55,7 +55,7 @@ const option = ref({
   },
   series: [
     {
-      name: 'Shopee Sources',
+      name: 'Shoper Sources',
       type: 'pie',
       radius: '55%',
       center: ['50%', '65%'],

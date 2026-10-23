@@ -24,7 +24,7 @@ const onClosePopupQR = () => {
         <span class="absolute rounded-full bg-gray-600 w-7 h-7 border-3 border-solid border-white -top-2 -right-2 text-white flex justify-center items-center cursor-pointer" @click="onClosePopupQR"><ICross /></span>
         <div class="col-span-2 p-5 text-left">
           <h2 class="text-xl font-bold">
-            <!-- Tải ứng dụng Shopee để nhận ngay Quà Tặng từ chúng tớ nhé! -->
+            <!-- Tải ứng dụng shoper để nhận ngay Quà Tặng từ chúng tớ nhé! -->
             {{ t('cmonthsale.download') }}!
           </h2>
           <h5 class="py-2 text-lg font-normal">

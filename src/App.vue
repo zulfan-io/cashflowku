@@ -9,9 +9,9 @@ onMounted(() => {
 })
 
 useHead({
-  title: 'e-shopee',
+  title: 'shoper',
   meta: [
-    { name: 'description', content: 'Online shopping application and e-commerce trading platform real-time.' }, { name: 'author', content: 'https://github.com/thuongtruong1009/e-shopee' },
+    { name: 'description', content: 'Online shopping application and e-commerce trading platform real-time.' }, { name: 'author', content: 'https://github.com/zulfan-io/cashflowku' },
   ],
 })
 const isScroll = ref(false)
