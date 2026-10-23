@@ -51,7 +51,7 @@ const activeTime = ref('minutes')
       <div class="p-3">
         <div class="flex justify-evenly gap-3 rounded-lg p-3 text-gray-200 w-4/5" :style="`background-image: url(${getResources(seller.payget.cover_image)})`" :class="{'bg-[#644B4A]': !seller.payget.cover_image}">
           <img v-if="seller.payget.avatar_image" :src="getResources(seller.payget.avatar_image)" alt="shop_avatar" class="rounded-full border-4 border-[#A29392] w-25 h-25 object-cover">
-          <img v-else src="https://cf.shopee.vn/file/56dd7c9788031f9b16fd990b11ccc62c_tn" alt="shop_avatar" class="rounded-full border-4 border-[#A29392] w-25 h-25">
+          <img v-else src="/img/gen/avatar-store.png" alt="shop_avatar" class="rounded-full border-4 border-[#A29392] w-25 h-25">
           <div class="grid place-content-between">
             <div>
               <h2 class="text-xl text-white font-medium">

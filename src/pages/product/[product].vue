@@ -153,11 +153,11 @@ const onvisitShop = () => {
         <img :src="getResources(productImg[0])" alt="product_img" class="max-w-112 max-h-112 rounded-2xl shadow-lg shadow-gray-400/50 dark:shadow-gray-700">
         <div class="grid grid-cols-5 max-w-112 mt-3 gap-2">
           <img v-for="(img, i) in productImg" :key="i" :src="getResources(img)" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <!-- <img src="https://cf.shopee.vn/file/12ae221177dcb74dc4b1701afc06b298_tn" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <img src="https://cf.shopee.vn/file/5413e844e5893181b0f33a191af65cd0_tn" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <img src="https://cf.shopee.vn/file/7ed7a314372976ba07c7cc4f083bbf68_tn" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <img src="https://cf.shopee.vn/file/f0ef79bb6556880ebb85baab0e64c8d6" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D]">
-          <img src="https://cf.shopee.vn/file/963e9b04751b757bb2a4ead4d1a2f1e9_tn" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer"> -->
+          <!-- <img src="/img/gen/preview-1.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
+          <img src="/img/gen/preview-2.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
+          <img src="/img/gen/preview-3.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
+          <img src="/img/gen/preview-4.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D]">
+          <img src="/img/gen/preview-5.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer"> -->
         </div>
       </div>
       <div class="pr-5 grid content-between min-h-112">
@@ -281,7 +281,7 @@ const onvisitShop = () => {
       </div>
       <div class="flex justify-center items-center gap-5">
         <div class="flex items-center gap-1">
-          <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/pdp/83e10a1f95cb083579c089448ef8dd3b.png" alt="insurance_icon" class="max-w-4 max-h-4">
+          <img src="/img/gen/insurance.png" alt="insurance_icon" class="max-w-4 max-h-4">
           <p>e-shopee {{ t('product.insurance') }}</p>
         </div>
         <div class="capitalize text-gray-500 text-sm">
@@ -294,7 +294,7 @@ const onvisitShop = () => {
   <div class="shop-product-container max-w-300 bg-white dark:bg-gray-800 rounded-xl shadow-md shadow-gray-400/50 p-5 mx-2 divide-x divide-1 divide-solid divide-gray-300 flex flex-wrap">
     <div class="flex">
       <img v-if="seller.payget.avatar_image" :src="`https://tp-o.tk/resources/images/${seller.payget.avatar_image}`" alt="shop_avatar" class="max-w-19 max-h-19 rounded-full shadow-md shadow-gray-200 mr-4 object-cover">
-      <img v-else src="https://cf.shopee.vn/file/7ebd612d6fddcf7f4114bf2d97da382a_tn" alt="shop_avatar" class="max-w-19 max-h-19 rounded-full shadow-md shadow-gray-200 mr-4">
+      <img v-else src="/img/gen/avatar-shop.png" alt="shop_avatar" class="max-w-19 max-h-19 rounded-full shadow-md shadow-gray-200 mr-4">
       <div class="min-w-85">
         <p class="font-medium text-md">
           {{ seller.payget.name }}
@@ -421,7 +421,7 @@ const onvisitShop = () => {
       <div v-for="i in 2" :key="i" class="flex justify-between items-start py-3">
         <div class="flex">
           <div class="px-3">
-            <img src="https://cf.shopee.vn/file/3922ddaf7b5dde58c3193c6689e7aaca_tn" alt="customer_avatar_img" class="max-w-10 max-h-10 rounded-full">
+            <img src="/img/gen/avatar-customer.png" alt="customer_avatar_img" class="max-w-10 max-h-10 rounded-full">
           </div>
           <div class="customer-cmt text-sm text-gray-600 dark:text-gray-300">
             <p class="customer-username text-xs">
