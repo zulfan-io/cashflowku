@@ -92,6 +92,7 @@ const toggleLocales = () => {
       </div>
     </main>
     <CGiftCards />
+    <CGiftRow />
     <section class="index-services p-5">
       <div class="services-title p-10 break-words text-center">
         <h1 class="text-4xl font-medium my-3">
@@ -134,13 +135,13 @@ const toggleLocales = () => {
         </div>
       </div>
     </section>
-    <section class="index-eshoppe pt-10 bg-[#F9F9F9]">
+    <section v-if="false" class="index-eshoppe pt-10 bg-[#F9F9F9]" data-hidden="mockup-shopee-mall">
       <div class="bg-[#F9F9F9]">
         <div>
           <img src="/img/index/mobile_1.png" alt="mobile_1_img">
         </div>
         <div class="grid content-center">
-          <h1>e-shoppe</h1>
+          <h1>shoper</h1>
           <h5>shoper! {{ t('index.advertisement-1-desc') }}.</h5>
         </div>
       </div>
