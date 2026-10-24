@@ -91,6 +91,7 @@ const toggleLocales = () => {
         <video src="/img/gen/swipe-hero.webm" autoplay muted loop playsinline aria-label="shoper flash sale" class="max-w-full h-auto"></video>
       </div>
     </main>
+    <CGiftCards />
     <section class="index-services p-5">
       <div class="services-title p-10 break-words text-center">
         <h1 class="text-4xl font-medium my-3">
