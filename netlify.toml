@@ -1,6 +1,6 @@
 # MERGE: config lama (redirects+headers+node16) + benerin 2 bug template (command & publish)
 [build]
-  command = "pnpm build"        # buang "ci =" garbage; Netlify auto-install dari lockfile
+  command = "pnpm exec vite build"   # SKIP SSR: client-only, lewatin batu swiper ESM (besok §7 fix proper)        # buang "ci =" garbage; Netlify auto-install dari lockfile
   publish = "dist"              # buang slash depan ("/dist" = not found)
 [build.environment]
   NODE_VERSION = "18"           # pertahanin yang dites template, jangan nebak 18
