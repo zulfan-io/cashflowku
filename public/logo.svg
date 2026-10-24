@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="shoper">
+  <rect width="64" height="64" rx="16" fill="#FF7A1A"/>
+  <path d="M17 30h30v19H17z" fill="#FFF7EC"/>
+  <path d="M15 24h34v8H15z" fill="#00B8A9"/>
+  <path d="M32 24v25" stroke="#FF7A1A" stroke-width="4"/>
+  <path d="M32 24c-6-10-16-4-9 2 3 3 9 2 9-2z" fill="#FFD166"/>
+  <path d="M32 24c6-10 16-4 9 2-3 3-9 2-9-2z" fill="#FFD166"/>
+</svg>
