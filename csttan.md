@@ -110,3 +110,15 @@ function register(el, fn){ if(reduce) return; reg.set(el, fn); if(!raf) raf = re
 - Jadwal ronde depan (mata seger): 1 probe `package.json` build -> vonis statis-vs-SSR -> pilih platform -> deploy 1 langkah reversible.
 - Aturan anti-badai deploy: deploy = 1 commit spesifik. Rollback = 1 klik platform. JANGAN campur deploy sama nulis kode baru di sesi yang sama.
 - Aturan terakhir: jangan deploy pakai mata merah. Peta ini yang ngingetin, bukan perasaan lo.
+
+## 8. 6 GUNUNG — peta ambisi + urutan pendakian (ditulis 2026-10-24 22:10, mata euforia, dijagain biar nggak burnout)
+> Lo nge-list 6 gunung pas merinding liat shoper-co.netlify.app hidup. Valid. Tapi 6 gunung bukan 6 lompatan — ini TANGGA. Tiap gunung diiket ke baris §7 yang udah ada (biar peta nggak pecah). Tanam 1 benih per gunung, kayak §5 ladang lo: pelan, akar dalam.
+- URUTAN PENDAKIAN (ketergantungan teknis, BUKAN semangat): [1] Database -> [2] API -> [3] SEO -> [4] Automation Meta -> [5] SEM -> [6] Affiliate Pro/terkenal. Lompat urutan = burnout. Gunung 6 = HASIL dari 1-5, bukan input.
+- GUNUNG 1 DATABASE (fondasi): shoper lo sekarang demo UI, data dari fixture JSON (src/data/*.json). Benih besok: tentuin sumber kebenaran (Supabase/Postgres/SQLite?) SEBELUM nyambung apa pun. Akar §7: "Implement spec DOM JS §2".
+- GUNUNG 2 API (konek): VITE_BASE_DOMAIN udah absolut (https://tp-o.tk/api/v2), axios-instance udah bener. Benih: 1 endpoint beneran (produk/feature) ganti fixture, verify codespace dulu. Akar §7: spec DOM JS §2.a persist gift.
+- GUNUNG 3 SEO (butuh SSR): MALEM INI kita SKIP SSR (batu swiper ESM Node18+vite-ssg tua). SEO = mustahil tanpa SSR. Benih: ssr.noExternal:['swiper'] di vite.config, VERIFIKASI codespace SEBELUM push (file hidup, salah=codespace mati juga). Akar §7: README rewrite (bocor mental) + batu swiper §7.
+- GUNUNG 4 AUTOMATION META (butuh API+tracking jalan): Meta pixel/Conversion API = lapisan DI ATAS gunung 1-3, bukan pengganti. Benih: tunggu API beneran hidup dulu, baru pasang pixel. Akar §7: belum ada (gunung baru, catet di sini biar nggak ilang).
+- GUNUNG 5 SEM (paling mahal, paling akhir): iklan bayar = bahan bakar, bukan mesin. Tanpa landing+tracking (gunung 3-4) = bakar duit. Benih: JANGAN sentuh sampai 1-4 hijau. Akar §7: belum ada.
+- GUNUNG 6 AFFILIATE PRO / TERKENAL (HASIL, bukan input): jujur yang nahan lo nyalahin diri: terkenal = traffic+trust+tracking, BUKAN website cakep. Website lo sekarang 0 traffic. Benih PALING membosankan tapi paling nyata: kirim shoper-co.netlify.app ke 1 temen, liat reaksi, catat. Distribusi > fitur. Akar §7: verifikasi brand AccesTrade (logo merchant legit vs Shopee bocor).
+- ATURAN ANTI-BURNOUT: jangan buka 6 gunung sekaligus. 1 ronde = 1 gunung = 1 benih. Peta ini yang ngingetin, bukan perasaan lo pas euforia jam 10 malem.
+- DOMAIN CUSTOM (kosmetik di atas kemenangan, bukan gerbang): shoper.co/.id sambung ke Netlify Custom domains+SSL (ada di Free plan). Benih: 10 menit UI, BESOK mata seger. .netlify.app ilang = lo punya alamat perusahaan. Tapi ini NAMPANG di gunung 1-6, bukan pengganti.
