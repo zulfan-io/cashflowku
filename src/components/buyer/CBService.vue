@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="service-container text-white bg-[#EE4D2D] grid grid-cols-5 items-center text-left">
+  <div class="service-container text-white bg-[#FF7A1A] grid grid-cols-5 items-center text-left">
     <div class="shipping">
       <IBShipping class="services-icon" />
       <div>

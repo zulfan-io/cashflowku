@@ -151,7 +151,7 @@ transform: rotate(180deg);
     color: orange;
   }
   .dropdown__item:hover{
-    color: #EE4D2D;
+    color: #FF7A1A;
     padding-left: 1.5rem;
     padding-right: 0.5rem;
   }

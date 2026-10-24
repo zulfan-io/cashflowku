@@ -169,7 +169,7 @@ const signOut = async() => {
   position: relative;
 }
 .menu-child-link:hover, .menu-child-link:focus {
-  color: #EE4D2D;
+  color: #FF7A1A;
   padding-left: 1rem;
   padding-right: 0.4rem;
 }

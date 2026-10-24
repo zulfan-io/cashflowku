@@ -152,12 +152,12 @@ const onvisitShop = () => {
       <div>
         <img :src="getResources(productImg[0])" alt="product_img" class="max-w-112 max-h-112 rounded-2xl shadow-lg shadow-gray-400/50 dark:shadow-gray-700">
         <div class="grid grid-cols-5 max-w-112 mt-3 gap-2">
-          <img v-for="(img, i) in productImg" :key="i" :src="getResources(img)" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <!-- <img src="/img/gen/preview-1.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <img src="/img/gen/preview-2.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <img src="/img/gen/preview-3.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer">
-          <img src="/img/gen/preview-4.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D]">
-          <img src="/img/gen/preview-5.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#EE4D2D] cursor-pointer"> -->
+          <img v-for="(img, i) in productImg" :key="i" :src="getResources(img)" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#FF7A1A] cursor-pointer">
+          <!-- <img src="/img/gen/preview-1.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#FF7A1A] cursor-pointer">
+          <img src="/img/gen/preview-2.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#FF7A1A] cursor-pointer">
+          <img src="/img/gen/preview-3.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#FF7A1A] cursor-pointer">
+          <img src="/img/gen/preview-4.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#FF7A1A]">
+          <img src="/img/gen/preview-5.jpg" alt="product_preview_img" class="rounded-md border-2 border-solid hover:border-[#FF7A1A] cursor-pointer"> -->
         </div>
       </div>
       <div class="pr-5 grid content-between min-h-112">
@@ -166,7 +166,7 @@ const onvisitShop = () => {
         </h2>
         <div class="flex divide-1 divide-solid divide-x divide-gray-300">
           <div class="flex items-center gap-2 pr-3">
-            <p class="border-b-1 border-b-solid border-b-[#EE4D2D] text-[#EE4D2D] font-medium">
+            <p class="border-b-1 border-b-solid border-b-[#FF7A1A] text-[#FF7A1A] font-medium">
               5.0
             </p>
             <div class="flex gap-0.25">
@@ -199,13 +199,13 @@ const onvisitShop = () => {
               78.000
             </h2>
           </div>
-          <div class="current-price flex text-[#EE4D2D]">
+          <div class="current-price flex text-[#FF7A1A]">
             <p>$</p>
             <h2 class="font-medium text-3xl">
               {{ productPrice }}
             </h2>
           </div>
-          <div class="bg-[#EE4D2D] rounded-sm px-1">
+          <div class="bg-[#FF7A1A] rounded-sm px-1">
             <p class="text-white font-medium text-xs">
               {{ productStatus(productResponseData.status_id) }}
             </p>
@@ -214,7 +214,7 @@ const onvisitShop = () => {
         <div class="infor">
           <label>{{ t('product.weight') }}</label>
           <p>{{ productResponseData.weight }}gram</p>
-          <p class="text-[#EE4D2D] bg-[#FFEEE8] px-1 text-sm ml-5">
+          <p class="text-[#FF7A1A] bg-[#FFEEE8] px-1 text-sm ml-5">
             {{ t('product.buy-with-deal') }}
           </p>
         </div>
@@ -262,13 +262,13 @@ const onvisitShop = () => {
           </p>
         </div>
         <div class="flex gap-3">
-          <button class="px-5 py-3 rounded-md bg-[#FFEEE8] hover:bg-[#FFF5F1] border-1 border-solid border-[#EE4D2D] text-[#EE4D2D] capitalize flex items-center gap-1" @click="handleAdd">
+          <button class="px-5 py-3 rounded-md bg-[#FFEEE8] hover:bg-[#FFF5F1] border-1 border-solid border-[#FF7A1A] text-[#FF7A1A] capitalize flex items-center gap-1" @click="handleAdd">
             <ICart class="max-h-6" />{{ t('product.add-to-cart') }}
           </button>
-          <button class="px-5 py-3 rounded-md bg-[#EE4D2D] hover:bg-[#F05D40] border-1 border-solid border-[#EE4D2D] text-white capitalize" @click="handleOrder">
+          <button class="px-5 py-3 rounded-md bg-[#FF7A1A] hover:bg-[#F05D40] border-1 border-solid border-[#FF7A1A] text-white capitalize" @click="handleOrder">
             {{ t('product.order-now') }}
           </button>
-          <button v-if="isAdd" class="px-5 py-3 rounded-md bg-[#FFEEE8] hover:bg-[#FFF5F1] border-1 border-solid border-[#EE4D2D] text-[#EE4D2D] capitalize flex items-center gap-1" @click="router.push('/buyer/cart')">
+          <button v-if="isAdd" class="px-5 py-3 rounded-md bg-[#FFEEE8] hover:bg-[#FFF5F1] border-1 border-solid border-[#FF7A1A] text-[#FF7A1A] capitalize flex items-center gap-1" @click="router.push('/buyer/cart')">
             <ICart class="max-h-6" />View cart
           </button>
         </div>
@@ -303,10 +303,10 @@ const onvisitShop = () => {
           {{ t('product.online') }} 1 minutes {{ t('product.ago') }}
         </p>
         <div class="flex gap-2 text-sm mt-2">
-          <button class="px-3 py-0.5 rounded-md bg-[#FFEEE8] hover:bg-[#FFF5F1] border-1 border-solid border-[#EE4D2D] text-[#EE4D2D] capitalize flex items-center gap-1">
+          <button class="px-3 py-0.5 rounded-md bg-[#FFEEE8] hover:bg-[#FFF5F1] border-1 border-solid border-[#FF7A1A] text-[#FF7A1A] capitalize flex items-center gap-1">
             <IChat />{{ t('product.chat-now') }}
           </button>
-          <button class="px-3 py-1 rounded-md hover:bg-[#FAFAFA] border-2 border-solid border-gray-300 text-[#EE4D2D] capitalize flex items-center gap-1" @click="onvisitShop">
+          <button class="px-3 py-1 rounded-md hover:bg-[#FAFAFA] border-2 border-solid border-gray-300 text-[#FF7A1A] capitalize flex items-center gap-1" @click="onvisitShop">
             <IShop />{{ t('product.visit-shop') }}
           </button>
         </div>
@@ -471,12 +471,12 @@ const onvisitShop = () => {
 }
 .infor .box-type:hover,
 .infor .box-type.active{
-  color: #EE4D2D;
-  border-color: #EE4D2D;
+  color: #FF7A1A;
+  border-color: #FF7A1A;
   background: #FFF5F1;
 }
 .shop-product-container span{
-  color: #EE4D2D;
+  color: #FF7A1A;
 }
 .product-details > div:not(:first-child):not(:last-child) {
   display: flex;

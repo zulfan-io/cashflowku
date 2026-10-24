@@ -4,6 +4,6 @@
 
 <style scoped>
 polygon{
-    fill: #EE4D2D;
+    fill: #FF7A1A;
 }
 </style>

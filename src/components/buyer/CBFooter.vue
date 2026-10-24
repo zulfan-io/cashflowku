@@ -32,7 +32,7 @@ const { t } = useI18n()
         <h3 :class="{dark : isDark}" class="flex gap-2 items-center">
           <IInfor /> {{ t('footer.information') }}
         </h3>
-        <span class="absolute bg-[#EE4D2D] w-15 h-0.5" />
+        <span class="absolute bg-[#FF7A1A] w-15 h-0.5" />
         <ul>
           <li>{{ t('footer.delivery') }}</li>
           <li><a href="/about">{{ t('footer.about us') }}</a></li>
@@ -46,7 +46,7 @@ const { t } = useI18n()
         <h3 :class="{dark : isDark}" class="flex items-center gap-2">
           <ILink /> {{ t('footer.link') }}
         </h3>
-        <span class="absolute bg-[#EE4D2D] w-15 h-0.5" />
+        <span class="absolute bg-[#FF7A1A] w-15 h-0.5" />
         <ul>
           <li><a href="#">{{ t('footer.privacy policy') }}</a></li>
           <li><a href="#">{{ t('footer.term of service') }}</a></li>
@@ -60,14 +60,14 @@ const { t } = useI18n()
         <h3 :class="{dark : isDark}" class="flex items-center gap-2">
           <INotify /> {{ t('footer.newsletter') }}
         </h3>
-        <span class="absolute bg-[#EE4D2D] w-15 h-0.5" />
+        <span class="absolute bg-[#FF7A1A] w-15 h-0.5" />
         <div class="py-4">
           <p>{{ t('footer.subscribe') }}</p>
           <p><em>{{ t('footer.sign up today') }}</em></p>
         </div>
         <form action="" method="post" class="py-4 whitespace-nowrap relative">
           <input type="text" placeholder="Your email address..." class="outline-none rounded-l-3xl px-3 py-2.5 w-4/6 border-solid border-1 border-transparent shadow-md shadow-gray-300" autofocus>
-          <button type="submit" class="bg-[#EE4D2D] text-white rounded-r-3xl px-3 py-2.5 shadow-md shadow-gray-400">
+          <button type="submit" class="bg-[#FF7A1A] text-white rounded-r-3xl px-3 py-2.5 shadow-md shadow-gray-400">
             {{ t('footer.sign up') }}
           </button>
         </form>
@@ -125,7 +125,7 @@ ul > li{
 }
 ul > li:hover{
   transform: translateX(0.75rem);
-  color: #EE4D2D;
+  color: #FF7A1A;
 }
 form::after{
   content: url("https://patch.com/img/cdn/assets/layout/subscribe/planeAndTrails.svg");

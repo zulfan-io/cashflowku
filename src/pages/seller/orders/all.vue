@@ -125,7 +125,7 @@ function clearForm() {
 }
 .head-nav > div:hover{
   transition: 0.2s linear;
-  color: #ee4d2d;
+  color: #FF7A1A;
   cursor: pointer;
 }
 .head-nav > div.active{

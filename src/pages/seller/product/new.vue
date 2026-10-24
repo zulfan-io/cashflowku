@@ -310,7 +310,7 @@ const handleCreate = async() => {
             <input type="number" placeholder="warehouse" class="px-1">
             <input type="text" placeholder="SKU type" class="px-1">
           </div>
-          <button class="rounded-md bg-[#EE4D2D] hover:bg-[#E54A2B] px-3 py-1 text-white border-1 border-[#e9e9e9]">
+          <button class="rounded-md bg-[#FF7A1A] hover:bg-[#E54A2B] px-3 py-1 text-white border-1 border-[#e9e9e9]">
             Appy for all type
           </button>
         </div>
@@ -407,7 +407,7 @@ const handleCreate = async() => {
         </div>
         <div class="transport_fields">
           <label>Fee</label>
-          <button class="px-5 py-2 rounded-md hover:bg-[#FFF5F1] border-1 border-solid border-[#EE4D2D] text-[#EE4D2D] text-sm">
+          <button class="px-5 py-2 rounded-md hover:bg-[#FFF5F1] border-1 border-solid border-[#FF7A1A] text-[#FF7A1A] text-sm">
             Activate the transport unit
           </button>
         </div>
@@ -417,7 +417,7 @@ const handleCreate = async() => {
       <button class="inline rounded-md bg-white hover:bg-[#F6F6F6] px-3 py-1.5 text-gray-600 border-1 border-[#e9e9e9] flex items-center gap-1" @click="goBack">
         <IARemove />Cancel
       </button>
-      <button class="inline rounded-md bg-[#EE4D2D] hover:bg-[#E54A2B] px-3 py-1.25 text-white border-1 border-[#e9e9e9] flex items-center gap-1">
+      <button class="inline rounded-md bg-[#FF7A1A] hover:bg-[#E54A2B] px-3 py-1.25 text-white border-1 border-[#e9e9e9] flex items-center gap-1">
         <ISave />Save & Display
       </button>
     </div>

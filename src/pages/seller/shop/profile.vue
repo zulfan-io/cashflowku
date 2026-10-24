@@ -303,7 +303,7 @@ $(document).ready(() => {
   padding: 0.75rem 0;
 }
 .profile-field > div > div:nth-child(2){
-  color:#EE4D2D;
+  color:#FF7A1A;
   cursor: pointer;
 }
 label{
