@@ -98,3 +98,15 @@ function register(el, fn){ if(reduce) return; reg.set(el, fn); if(!raf) raf = re
 - $health = vonis kondisi rumah SEKARANG (vite hidup? git sinkron? uncommitted berapa?). Lo nggak perlu nanya asisten "web sehat ga" -> ketik `health`, disk yang jawab.
 - Kondisi Terkini (snapshot ronde ini): fix ranjau vitest = KE-GIT (77f660a) -> cold-start nggak bisa bikin hitam lagi. health.sh + sun-poc + peta = KE-GIT (8b051fd). vite sesi codespace ini MATI karena restart (NORMAL, tinggal start, bukan benerin).
 - Dosa yang dipetain: asisten 5x salah hipotesis karena megang peta di CHAT (volatile). Ronde ini pindah ke DISK (persistent). Mulai sekarang: update §0/§6 DI FILE ini sebelum ngapa-ngapain, bukan di kepala.
+
+## 7. RAILWAY / DEPLOY LIVE — keputusan + jadwal (ditulis 2026-10-24, mata 27 jam)
+> Lo mutusin: lepas dari drama port codespace, web harus hidup sendiri. Arah BENER. Timing SALAH malam ini. Peta ini yang nahan lo, bukan perasaan.
+- Keputusan: target berikutnya = deploy LIVE (Railway / Netlify / Vercel). Ini milestone resmi, bukan angan. Numpang di git lo yang sama — nggak mulai dari nol.
+- Kenapa BUKAN malam ini: 27 jam + mata merah = deploy = momen 1 typo bikin ngamuk. Deploy butuh kepala dingin, bukan bensin sisa 2 jam.
+- Utang jujur (belum diverifikasi, ronde depan probe dulu):
+  - [ ] build script package.json: SSG? SPA? vite-ssg? (menentukan platform: statis -> Netlify/Vercel; butuh server/API -> Railway)
+  - - [ ] proxy /api/v2 -> tp-o.tk: vite proxy MATI di production. Perlu reverse proxy (nginx/Railway domain) ATAU front-end manggil API langsung (CORS). Belum diurus = web live tapi API mati.
+  - [ ] biaya + cold-start: Railway free tier sleep juga (bukan immortal). Netlify/Vercel gratis lebih cocok kalau build lo statis.
+- Jadwal ronde depan (mata seger): 1 probe `package.json` build -> vonis statis-vs-SSR -> pilih platform -> deploy 1 langkah reversible.
+- Aturan anti-badai deploy: deploy = 1 commit spesifik. Rollback = 1 klik platform. JANGAN campur deploy sama nulis kode baru di sesi yang sama.
+- Aturan terakhir: jangan deploy pakai mata merah. Peta ini yang ngingetin, bukan perasaan lo.
