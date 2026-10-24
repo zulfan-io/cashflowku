@@ -1,7 +1,14 @@
-# jaring anti-badai deploy: pin build biar Netlify nggak nebak
+# MERGE: config lama (redirects+headers+node16) + benerin 2 bug template (command & publish)
 [build]
-  command = "pnpm build"      # = vite-ssg build (package.json:23)
-  publish = "dist"            # output vite-ssg
+  command = "pnpm build"        # buang "ci =" garbage; Netlify auto-install dari lockfile
+  publish = "dist"              # buang slash depan ("/dist" = not found)
 [build.environment]
-  NODE_VERSION = "18"         # vite 2.9 aman di 18; deterministic
-# Netlify auto-detect pnpm dari pnpm-lock.yaml, nggak perlu pin PNPM_VERSION
+  NODE_VERSION = "16"           # pertahanin yang dites template, jangan nebak 18
+[[redirects]]                   # RESTORE: tanpa ini refresh route dalam = 404
+  from = "/*"
+  to = "/index.html"
+  status = 200
+[[headers]]                     # RESTORE: PWA manifest butuh MIME bener
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
