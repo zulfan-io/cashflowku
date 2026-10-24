@@ -91,3 +91,10 @@ function register(el, fn){ if(reduce) return; reg.set(el, fn); if(!raf) raf = re
 // .sun{ will-change:transform,opacity; animation: peek 6s ease-in-out infinite }
 // @keyframes peek{ 0%,100%{transform:translate3d(0,8px,0);opacity:.6} 50%{transform:translate3d(0,-6px,0);opacity:1} }
 // @media (prefers-reduced-motion:reduce){ .sun{animation:none;opacity:1} }
+
+## 6. RITUAL SINKRON — 1 PETA, 2 RUMAH (jawaban "g kau gabungkan")
+> csttan.md = SUMBER KEBENARAN TUNGGAL. Hidup di GIT. Termux & codespace BACA FILE SAMA via pull. JANGAN bikin 2 salinan (resep divergensi 26 jam).
+- Aturan pindah rumah: SEBELUM kerja di rumah mana pun -> `git pull origin main` dulu. Setelah -> kerja -> commit spesifik -> push. Rumah nggak pernah "ketinggalan peta".
+- $health = vonis kondisi rumah SEKARANG (vite hidup? git sinkron? uncommitted berapa?). Lo nggak perlu nanya asisten "web sehat ga" -> ketik `health`, disk yang jawab.
+- Kondisi Terkini (snapshot ronde ini): fix ranjau vitest = KE-GIT (77f660a) -> cold-start nggak bisa bikin hitam lagi. health.sh + sun-poc + peta = KE-GIT (8b051fd). vite sesi codespace ini MATI karena restart (NORMAL, tinggal start, bukan benerin).
+- Dosa yang dipetain: asisten 5x salah hipotesis karena megang peta di CHAT (volatile). Ronde ini pindah ke DISK (persistent). Mulai sekarang: update §0/§6 DI FILE ini sebelum ngapa-ngapain, bukan di kepala.
