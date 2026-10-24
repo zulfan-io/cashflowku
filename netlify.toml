@@ -3,7 +3,7 @@
   command = "pnpm build"        # buang "ci =" garbage; Netlify auto-install dari lockfile
   publish = "dist"              # buang slash depan ("/dist" = not found)
 [build.environment]
-  NODE_VERSION = "16"           # pertahanin yang dites template, jangan nebak 18
+  NODE_VERSION = "18"           # pertahanin yang dites template, jangan nebak 18
 [[redirects]]                   # RESTORE: tanpa ini refresh route dalam = 404
   from = "/*"
   to = "/index.html"
