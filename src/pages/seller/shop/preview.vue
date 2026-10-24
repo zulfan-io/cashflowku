@@ -337,7 +337,7 @@ const hintListComputed = computed(() => hintList.slice(0, hintListInit.value))
     <div class="h-min bg-white dark:bg-gray-800 rounded-lg shadow-md shadow-gray-300 p-3 grid grid-cols-2 justify-between mt-5 border-t-1 border-t-[#e9e9e9]">
       <div class="p-3">
         <div class="flex justify-evenly gap-3 bg-[#644B4A] rounded-md p-3 text-gray-200 w-4/5">
-          <img src="/img/gen/avatar-store.png" alt="shop_avatar" class="rounded-full border-4 border-[#A29392] w-25 h-25">
+          <img src="/img/gen/avatar-store.webp" alt="shop_avatar" class="rounded-full border-4 border-[#A29392] w-25 h-25">
           <div class="grid place-content-between">
             <div>
               <h2 class="text-xl text-white font-medium">

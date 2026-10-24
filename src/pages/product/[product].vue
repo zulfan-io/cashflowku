@@ -281,7 +281,7 @@ const onvisitShop = () => {
       </div>
       <div class="flex justify-center items-center gap-5">
         <div class="flex items-center gap-1">
-          <img src="/img/gen/insurance.png" alt="insurance_icon" class="max-w-4 max-h-4">
+          <img src="/img/gen/insurance.webp" alt="insurance_icon" class="max-w-4 max-h-4">
           <p>shoper {{ t('product.insurance') }}</p>
         </div>
         <div class="capitalize text-gray-500 text-sm">
@@ -294,7 +294,7 @@ const onvisitShop = () => {
   <div class="shop-product-container max-w-300 bg-white dark:bg-gray-800 rounded-xl shadow-md shadow-gray-400/50 p-5 mx-2 divide-x divide-1 divide-solid divide-gray-300 flex flex-wrap">
     <div class="flex">
       <img v-if="seller.payget.avatar_image" :src="`https://tp-o.tk/resources/images/${seller.payget.avatar_image}`" alt="shop_avatar" class="max-w-19 max-h-19 rounded-full shadow-md shadow-gray-200 mr-4 object-cover">
-      <img v-else src="/img/gen/avatar-shop.png" alt="shop_avatar" class="max-w-19 max-h-19 rounded-full shadow-md shadow-gray-200 mr-4">
+      <img v-else src="/img/gen/avatar-shop.webp" alt="shop_avatar" class="max-w-19 max-h-19 rounded-full shadow-md shadow-gray-200 mr-4">
       <div class="min-w-85">
         <p class="font-medium text-md">
           {{ seller.payget.name }}
@@ -421,7 +421,7 @@ const onvisitShop = () => {
       <div v-for="i in 2" :key="i" class="flex justify-between items-start py-3">
         <div class="flex">
           <div class="px-3">
-            <img src="/img/gen/avatar-customer.png" alt="customer_avatar_img" class="max-w-10 max-h-10 rounded-full">
+            <img src="/img/gen/avatar-customer.webp" alt="customer_avatar_img" class="max-w-10 max-h-10 rounded-full">
           </div>
           <div class="customer-cmt text-sm text-gray-600 dark:text-gray-300">
             <p class="customer-username text-xs">
