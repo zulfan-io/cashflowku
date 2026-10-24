@@ -1,0 +1,41 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>shoper · Diskon Pagi ⛅ (POC)</title>
+<style>
+  /* POC statis: CSS @keyframes = compositor thread, 0 JS main-thread = seringan bulu.
+     GPU-only: CUMA transform+opacity. HARAM top/left/width/height. */
+  html,body{margin:0;height:100%;background:#0b1220;overflow:hidden;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .sky{position:fixed;inset:0;background:linear-gradient(180deg,#1e3a5f 0%,#3a6ea5 45%,#ffb27a 100%)}
+  .scene{position:fixed;inset:0;display:grid;place-items:center}
+  .wrap{position:relative;width:min(78vw,420px);aspect-ratio:1/1}
+  /* matahari ngintip malu-malu dari balik awan = JIWA yang Shopee nggak punya */
+  .sun{position:absolute;left:50%;top:58%;width:46%;aspect-ratio:1/1;transform:translate(-50%,-50%);
+    border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff3c4,#FFD166 45%,#FF7A1A 100%);
+    box-shadow:0 0 60px 12px rgba(255,122,26,.55);will-change:transform,opacity;
+    animation:peek 7s ease-in-out infinite, breathe 3.5s ease-in-out infinite}
+  .cloud{position:absolute;height:14%;border-radius:50px;background:rgba(255,255,255,.92);
+    will-change:transform;filter:blur(.3px)}
+  .c1{top:46%;left:-30%;width:70%;animation:drift 16s linear infinite}
+  .c2{top:60%;left:120%;width:55%;animation:drift 22s linear infinite reverse}
+  .label{position:fixed;bottom:8%;left:0;right:0;text-align:center;color:#FFF7EC;
+    font-weight:800;letter-spacing:.04em;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+  .label small{display:block;font-weight:500;opacity:.7;font-size:.8rem;margin-top:.3rem}
+  @keyframes peek{0%,100%{transform:translate(-50%,-30%);opacity:.55}
+    50%{transform:translate(-50%,-62%);opacity:1}}
+  @keyframes breathe{0%,100%{box-shadow:0 0 45px 8px rgba(255,122,26,.45)}
+    50%{box-shadow:0 0 75px 16px rgba(255,122,26,.7)}}
+  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(220%)}}
+  /* aksesibilitas + احترام: user set "kurangi gerakan" = diem, konten tetep ada */
+  @media (prefers-reduced-motion:reduce){
+    .sun,.cloud{animation:none!important}
+    .sun{transform:translate(-50%,-50%);opacity:1}
+  }
+</style></head>
+<body>
+  <div class="sky"></div>
+  <div class="scene"><div class="wrap">
+    <div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+  </div></div>
+  <div class="label">Diskon Pagi ⛅<small>POC animasi · shoper · belum dicolok ke index</small></div>
+</body></html>
