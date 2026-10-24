@@ -49,7 +49,6 @@ export default defineConfig({
         'vue-i18n',
         '@vueuse/head',
         '@vueuse/core',
-        'vitest',
       ],
       dts: 'src/auto-imports.d.ts',
     }),
@@ -180,11 +179,15 @@ export default defineConfig({
     ],
     exclude: [
       'vue-demi',
+    
+      'local-pkg',
+      'vitest',
     ],
   },
 
   // https://github.com/vitest-dev/vitest
   test: {
+    globals: true,
     include: ['test/**/*.test.ts'],
     environment: 'jsdom',
     deps: {
