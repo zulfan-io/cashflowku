@@ -12,8 +12,7 @@
 - [x] Interaksi awal: CGiftCards (Kejutan Hari Ini, flip) + CGiftRow (Deretan Kejutan, 8 kartu aset lo)
 - [x] Mockup "Shopee Mall" (section 137) -> HIDDEN reversible (v-if=false), file gambar ditinggal di disk
 - [x] Ranjau template: vitest di AutoImport -> dicabut (optimizeDeps.exclude + globals), vite 3333 hidup bersih (ready 2724ms, ranjau 0, html 1)
-- [x] Deploy LIVE: shoper-co.netlify.app (Netlify SPA, privat vault) - 8 batu nembus, rebrand utuh, dashboard jalan.
-- [x] VITE: hidup di :3333, vonis 3 angka hijau. README.md masih nyimpen screenshot e-shopee template = BUKAN bocor runtime, tapi bocor mental (bikin panik) -> rewrite README = P1
+- [i] VITE: hidup di :3333, vonis 3 angka hijau. README.md masih nyimpen screenshot e-shopee template = BUKAN bocor runtime, tapi bocor mental (bikin panik) -> rewrite README = P1
 
 ## 1. BACKLOG DINAMIS (P0=visual-butuh-alat / P1=interaksi+doc / P2=sistem / PARKIR)
 ### P0 — butuh alat yang belum ada di net 4G lo jam segini (JANGAN dipaksa malam ini)
@@ -99,29 +98,3 @@ function register(el, fn){ if(reduce) return; reg.set(el, fn); if(!raf) raf = re
 - $health = vonis kondisi rumah SEKARANG (vite hidup? git sinkron? uncommitted berapa?). Lo nggak perlu nanya asisten "web sehat ga" -> ketik `health`, disk yang jawab.
 - Kondisi Terkini (snapshot ronde ini): fix ranjau vitest = KE-GIT (77f660a) -> cold-start nggak bisa bikin hitam lagi. health.sh + sun-poc + peta = KE-GIT (8b051fd). vite sesi codespace ini MATI karena restart (NORMAL, tinggal start, bukan benerin).
 - Dosa yang dipetain: asisten 5x salah hipotesis karena megang peta di CHAT (volatile). Ronde ini pindah ke DISK (persistent). Mulai sekarang: update §0/§6 DI FILE ini sebelum ngapa-ngapain, bukan di kepala.
-
-## 7. RAILWAY / DEPLOY LIVE — keputusan + jadwal (ditulis 2026-10-24, mata 27 jam)
-> RESOLVED 2026-10-25: Railway/Vercel SUPERSEDED - fakta vite-ssg (SSG) + Netlify + LIVE di shoper-co.netlify.app. Arsip, bukan rencana lagi.
-> Lo mutusin: lepas dari drama port codespace, web harus hidup sendiri. Arah BENER. Timing SALAH malam ini. Peta ini yang nahan lo, bukan perasaan.
-- Keputusan: target berikutnya = deploy LIVE (Railway / Netlify / Vercel). Ini milestone resmi, bukan angan. Numpang di git lo yang sama — nggak mulai dari nol.
-- Kenapa BUKAN malam ini: 27 jam + mata merah = deploy = momen 1 typo bikin ngamuk. Deploy butuh kepala dingin, bukan bensin sisa 2 jam.
-- Utang jujur (belum diverifikasi, ronde depan probe dulu):
-  - [ ] build script package.json: SSG? SPA? vite-ssg? (menentukan platform: statis -> Netlify/Vercel; butuh server/API -> Railway)
-  - - [ ] proxy /api/v2 -> tp-o.tk: vite proxy MATI di production. Perlu reverse proxy (nginx/Railway domain) ATAU front-end manggil API langsung (CORS). Belum diurus = web live tapi API mati.
-  - [ ] biaya + cold-start: Railway free tier sleep juga (bukan immortal). Netlify/Vercel gratis lebih cocok kalau build lo statis.
-- Jadwal ronde depan (mata seger): 1 probe `package.json` build -> vonis statis-vs-SSR -> pilih platform -> deploy 1 langkah reversible.
-- Aturan anti-badai deploy: deploy = 1 commit spesifik. Rollback = 1 klik platform. JANGAN campur deploy sama nulis kode baru di sesi yang sama.
-- Aturan terakhir: jangan deploy pakai mata merah. Peta ini yang ngingetin, bukan perasaan lo.
-
-## 8. 6 GUNUNG — peta ambisi + urutan pendakian (ditulis 2026-10-24 22:10, mata euforia, dijagain biar nggak burnout)
-> Lo nge-list 6 gunung pas merinding liat shoper-co.netlify.app hidup. Valid. Tapi 6 gunung bukan 6 lompatan — ini TANGGA. Tiap gunung diiket ke baris §7 yang udah ada (biar peta nggak pecah). Tanam 1 benih per gunung, kayak §5 ladang lo: pelan, akar dalam.
-- URUTAN PENDAKIAN (ketergantungan teknis, BUKAN semangat): [1] Database -> [2] API -> [3] SEO -> [4] Automation Meta -> [5] SEM -> [6] Affiliate Pro/terkenal. Lompat urutan = burnout. Gunung 6 = HASIL dari 1-5, bukan input.
-- [!] KOREKSI MODEL 2026-10-25: lo BUKAN marketplace, lo AFILIATOR. Customer klik-out ke merchant (Zalora, Tiket, topup, pulsa), lo dapet komisi via ACCESSTRADE. Jadi GUNUNG 1 = DB OFFER affiliate (bukan produk), GUNUNG 2 = feed ACCESSTRADE + klik-out tracking (bukan checkout). Skema nunggu 1 byte offer ACCESSTRADE dari lo.
-- [ ] GUNUNG 1 DATABASE (fondasi): shoper lo sekarang demo UI, data dari fixture JSON (src/data/*.json). Benih besok: tentuin sumber kebenaran (Supabase/Postgres/SQLite?) SEBELUM nyambung apa pun. Akar §7: "Implement spec DOM JS §2".
-- [ ] GUNUNG 2 API (konek): VITE_BASE_DOMAIN udah absolut (https://tp-o.tk/api/v2), axios-instance udah bener. Benih: 1 endpoint beneran (produk/feature) ganti fixture, verify codespace dulu. Akar §7: spec DOM JS §2.a persist gift.
-- [ ] GUNUNG 3 SEO (butuh SSR): MALEM INI kita SKIP SSR (batu swiper ESM Node18+vite-ssg tua). SEO = mustahil tanpa SSR. Benih: ssr.noExternal:['swiper'] di vite.config, VERIFIKASI codespace SEBELUM push (file hidup, salah=codespace mati juga). Akar §7: README rewrite (bocor mental) + batu swiper §7.
-- [ ] GUNUNG 4 AUTOMATION META (butuh API+tracking jalan): Meta pixel/Conversion API = lapisan DI ATAS gunung 1-3, bukan pengganti. Benih: tunggu API beneran hidup dulu, baru pasang pixel. Akar §7: belum ada (gunung baru, catet di sini biar nggak ilang).
-- [ ] GUNUNG 5 SEM (paling mahal, paling akhir): iklan bayar = bahan bakar, bukan mesin. Tanpa landing+tracking (gunung 3-4) = bakar duit. Benih: JANGAN sentuh sampai 1-4 hijau. Akar §7: belum ada.
-- [ ] GUNUNG 6 AFFILIATE PRO / TERKENAL (HASIL, bukan input): jujur yang nahan lo nyalahin diri: terkenal = traffic+trust+tracking, BUKAN website cakep. Website lo sekarang 0 traffic. Benih PALING membosankan tapi paling nyata: kirim shoper-co.netlify.app ke 1 temen, liat reaksi, catat. Distribusi > fitur. Akar §7: verifikasi brand AccesTrade (logo merchant legit vs Shopee bocor).
-- ATURAN ANTI-BURNOUT: jangan buka 6 gunung sekaligus. 1 ronde = 1 gunung = 1 benih. Peta ini yang ngingetin, bukan perasaan lo pas euforia jam 10 malem.
-- DOMAIN CUSTOM (kosmetik di atas kemenangan, bukan gerbang): shoper.co/.id sambung ke Netlify Custom domains+SSL (ada di Free plan). Benih: 10 menit UI, BESOK mata seger. .netlify.app ilang = lo punya alamat perusahaan. Tapi ini NAMPANG di gunung 1-6, bukan pengganti.
