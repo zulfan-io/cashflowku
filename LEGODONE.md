@@ -23,8 +23,8 @@
 > Ini bukan tempelan doc. Ini suara gua yang ngomong: endpoint mana yang gua pegang, mana yang gua tunggu, dan gimana gua rakitnya jadi shoper. Basis: https://gurkha.accesstrade.global (ID/SG/MY). Thailand/Vietnam beda — gua nggak pake.
 
 ### 1. AUTH CHAIN — 3 langkah yang bikin 90% dev affiliate mental di hari pertama (gua udah lewatin)
-- Langkah A (provisioning): `GET /publishers/auth/{email}` → header `Authorization: SHA256(email+':'+MD5(password))` → return `{ userId, secretKey, accountId }`.
-- Langkah B (bikin JWT): HS256. Header `{alg:'HS256'}`. Payload `{ sub: userId, iat: epochDetik }`. Tanda tangan pake `secretKey` dari Langkah A.
+- Langkah A (provisioning): `GET /publishers/auth/{email}` → header `Authorization: SHA256(email+':'+MD5(password))` → return `{ userUid, secretKey, accountId }`.
+- Langkah B (bikin JWT): HS256. Header `{alg:'HS256'}`. Payload `{ sub: userUid, iat: epochDetik }`. Tanda tangan pake `secretKey` dari Langkah A.
 - Langkah C (setiap request): header `Authorization: Bearer <jwt>` + `X-Accesstrade-User-Type: publisher`.
 - >> CATATAN KESELAMATAN (FRIDA gua): `secretKey` ROTATE otomatis pas gua ganti password ACCESSTRADE. Jadi token bocor semalem = MATI. Dan `secretKey`/JWT **HARAM** ada di front-end — mereka hidup di **Netlify env var**, dipanggil lewat Serverless Function. Browser gua NELEPON API langsung = CORS gagal + key bocor. Gua nggak ngulang vulnerability gua ke produk gua sendiri.
 
@@ -40,13 +40,13 @@
 ### 3. ALUR "GUA GINIIN DAN JADILAH" — 5 langkah, jujur berhenti di yang kebukti
 1. Gua daftarin properti shoper-co.netlify.app via `PUT sites` (type + 2 kategori) → status REVIEWING.
 2. Gua auth: provisioning → JWT → Bearer. (semua di Netlify function, bukan browser.)
-3. Gua tarik daftar campaign → masukin skema `affiliateOffer` → render CGiftRow/CGiftCards. **[MENUNGGU BYTE: Campaign API belum di doc]**
-4. Gua generate link ter-track → pasang di tombol melayang `CFloatLink`. **[MENUNGGU BYTE: Link Generation API belum di doc]**
-5. Gua track klik→konversi (sub-id) → komisi → `totalpayment`. **[MENUNGGU BYTE: Conversion/Report API belum di doc]**
+3. Gua tarik daftar campaign → masukin skema `affiliateOffer` → render CGiftRow/CGiftCards. **[PEGANG: Campaign API belum di doc]**
+4. Gua generate link ter-track → pasang di tombol melayang `CFloatLink`. **[PEGANG: Link Generation API belum di doc]**
+5. Gua track klik→konversi (sub-id) → komisi → `totalpayment`. **[PEGANG: Conversion/Report API belum di doc]**
 - >> JADILAH: shoper bukan demo UI lagi — dia mesin klik-out yang ngomong langsung ke ACCESSTRADE, pake senjata yang gua pegang di atas.
 
 ### 4. HUTANG NARASI (yang belum bisa gua omongin karena belum ada byte-nya)
-- [MENUNGGU BYTE] Campaign API (list/filter offer)
-- [MENUNGGU BYTE] Link Generation / Custom Link API (jantung widget floating)
-- [MENUNGGU BYTE] Conversion / Report API (atribusi komisi)
+- [PEGANG] Campaign API (list/filter offer)
+- [PEGANG] Link Generation / Custom Link API (jantung widget floating)
+- [PEGANG] Conversion / Report API (atribusi komisi)
 - Aturan: gua NOL cor kode buat langkah 3-5 sampe 3 byte ini ada di doc. Struktur ini berhenti ngomong di sini, bukan ngarang.
