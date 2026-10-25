@@ -1,0 +1,30 @@
+[
+  {
+    "campaignId": 1,
+    "campaignName": "Agoda",
+    "merchantUrl": "",
+    "imageUrl": "https://s3.images.url",
+    "categories": [],
+    "affiliationStatus": "APPROVED",
+    "defaultRewards": [],
+    "affiliateLink": "https://click.accesstrade.in.id?rk=0000010000a1",
+    "promoCode": "AI45IUY",
+    "promoTitle": "Agoda Promo Code - Book Up To 80% OFF",
+    "remainDays": 1,
+    "periodDays": 2
+  },
+  {
+    "campaignId": 2,
+    "campaignName": "Lazada",
+    "merchantUrl": "",
+    "imageUrl": "https://s3.images.url1",
+    "categories": [],
+    "affiliationStatus": "APPROVED",
+    "defaultRewards": [],
+    "affiliateLink": "https://click.accesstrade.in.id?rk=0000020000a1",
+    "promoCode": "",
+    "promoTitle": "Agoda Promo Code - Book Up To 30% OFF",
+    "remainDays": 1,
+    "periodDays": 2
+  }
+]
