@@ -10,6 +10,7 @@
 - ☑ rebrand shoper (teks/merah/logo/aset/hero/CGift/hide mockup)
 - ☑ GUNUNG 1 DB OFFER AFFILIATE - skema nunggu byte ACCESSTRADE (lihat 8)
 - ☑ GUNUNG 2 API (part1 fixture+kartu) — beneran ganti fixture (→ §8)
+- ☐ GUNUNG 1.5 KATALOG tp-o.tk — adapter+fixture+debug kelar (cc8e3f5); skema TS + colok halaman nyusul
 - ☐ GUNUNG 3 SEO/SSR — ssr.noExternal swiper, verify codespace dulu (→ §8)
 - ☐ GUNUNG 4 Automation Meta — tunggu API hidup (→ §8)
 - ☐ GUNUNG 5 SEM — JANGAN sentuh smp 1-4 hijau (→ §8)
