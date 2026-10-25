@@ -26,6 +26,7 @@
           <span class="gc-face gc-back">
             <span class="gc-reward">{{ card.reward }}</span>
             <span class="gc-note">{{ card.note }}</span>
+            <button v-if="card.affiliateLink" class="gc-claim" @click.stop="claimCard(card)">KLAIM &amp; BUKA</button>
           </span>
         </span>
       </button>
@@ -64,11 +65,23 @@ const cards = reactive([
     reward: 'Koin Kejutan',
     note: 'Demo — belum klaim',
     opened: false
+  },
+  {
+    id: 'agoda',
+    label: 'Agoda',
+    image: '/img/gen/gift-box-open.webp',
+    reward: 'Diskon 80%',
+    note: 'Kode: AI45IUY',
+    affiliateLink: 'http://click.accesstrade.co.id/adv.php?rk=00000p000003',
+    opened: false
   }
 ])
 
 function openCard(card) {
   if (!card.opened) card.opened = true
+}
+function claimCard(card) {
+  if (card.affiliateLink) window.open(card.affiliateLink, '_blank', 'noopener')
 }
 </script>
 
@@ -174,4 +187,6 @@ function openCard(card) {
     transition: none;
   }
 }
+
+.gc-claim{margin-top:.5rem;padding:.5rem 1rem;border:0;border-radius:999px;background:#FF7A1A;color:#FFF7EC;font-weight:800;cursor:pointer}
 </style>
