@@ -16,7 +16,7 @@ function prod(p){
   return{id:p.id,name:p.name,image:(p.images&&p.images[0])||null,sold:p.sold||0,rating:Number(p.avg_rating)||0,price:prices.length?Math.min.apply(null,prices):null,stock:models.reduce((a,m)=>a+(Number(m.stock)||0),0),variants:p.variations||[],models,wholesale:p.wholesale_prices||[]};
 }
 export function tpoParse(raw){
-  const d=norm(raw&&raw.data!==undefined?raw.data:raw);
+  const env=norm(raw);const d=(env&&env.data!==undefined)?env.data:env;
   if(d&&Array.isArray(d.data))return{kind:'list',list:d.data.map(prod),page:{current:d.current_page,last:d.last_page,total:d.total,per_page:d.per_page,next:d.next_page_url}};
   if(d&&typeof d.slug==='string')return{kind:'shop',shop:d};
   if(d&&Array.isArray(d.models))return{kind:'product',product:prod(d)};
