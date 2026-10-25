@@ -8,8 +8,8 @@
 ## SHOPER — shoper-co.netlify.app (LIVE, privat vault)
 - ☑ 8 batu nembus: ranjau vitest → node18 → iconify → swiper(skip SSR) → deploy LIVE
 - ☑ rebrand shoper (teks/merah/logo/aset/hero/CGift/hide mockup)
-- ☐ GUNUNG 1 DB OFFER AFFILIATE - skema nunggu byte ACCESSTRADE (lihat 8)
-- ☐ GUNUNG 2 API — 1 endpoint beneran ganti fixture (→ §8)
+- ☑ GUNUNG 1 DB OFFER AFFILIATE - skema nunggu byte ACCESSTRADE (lihat 8)
+- ☑ GUNUNG 2 API (part1 fixture+kartu) — beneran ganti fixture (→ §8)
 - ☐ GUNUNG 3 SEO/SSR — ssr.noExternal swiper, verify codespace dulu (→ §8)
 - ☐ GUNUNG 4 Automation Meta — tunggu API hidup (→ §8)
 - ☐ GUNUNG 5 SEM — JANGAN sentuh smp 1-4 hijau (→ §8)
