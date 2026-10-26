@@ -51,3 +51,13 @@
 - [PEGANG] Link Generation / Custom Link API (jantung widget floating)
 - [PEGANG] Conversion / Report API (atribusi komisi)
 - Aturan: gua NOL cor kode buat langkah 3-5 sampe 3 byte ini ada di doc. Struktur ini berhenti ngomong di sini, bukan ngarang.
+<!-- PORT-MANIFEST v1 -->
+## VISI PORT-COLOK (dualitas + database)
+- DUALITAS UI: feed-bawah = kartu AFFILIATE (accesstrade); floating = GRID WIDGET ala Shopee (max 8 slot). Gadget & web ikut e-commerce, smooth semulus bulu.
+- REWARD: poin game -> PULSA GRATIS khusus dari owner. Database = nyawa.
+- TANGKEP MEMBER: email + HP + OTP = member = database berharga (kampanye ngumpulin data).
+- PORT/MANIFEST: campaign/game/network BARU = tambah objek di src/data/ports.json, NOL nyentuh kode = "tinggal nyambungin port".
+- SUMBER EKSTERNAL: accesstrade (affiliate), games-gratis (provider embed), voucher pulsa/marketplace (shopee/blibli/tiktok/lazada).
+- SETTINGAN: sistem port siap-panggil, klien klik kayak production besar (shopee/lazada).
+- STATUS JUJUR: manifest = REL KOSONG. DOM BELUM KEBUKTI (build 1m41s belum green). Platform-free: menang di CF/Netlify/apa pun, tinggal colok.
+

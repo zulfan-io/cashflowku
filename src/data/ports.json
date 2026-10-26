@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "ui": {
+    "dual": true,
+    "feed_bottom": "affiliate_card",
+    "floating": "widget_grid",
+    "floating_max_slots": 8
+  },
+  "reward": {
+    "pulsa_on_points": true,
+    "capture": [
+      "email",
+      "phone",
+      "otp"
+    ]
+  },
+  "ports": [
+    {
+      "id": "accesstrade",
+      "kind": "affiliate",
+      "enabled": true,
+      "mount": "feed_bottom",
+      "config": {}
+    },
+    {
+      "id": "member_otp",
+      "kind": "auth",
+      "enabled": true,
+      "mount": "gate",
+      "config": {
+        "fields": [
+          "email",
+          "phone"
+        ],
+        "otp": true
+      }
+    },
+    {
+      "id": "games_free",
+      "kind": "game",
+      "enabled": false,
+      "mount": "floating",
+      "config": {
+        "provider": "",
+        "slots": []
+      }
+    },
+    {
+      "id": "voucher_pulsa",
+      "kind": "widget",
+      "enabled": false,
+      "mount": "floating",
+      "config": {}
+    },
+    {
+      "id": "voucher_marketplace",
+      "kind": "widget",
+      "enabled": false,
+      "mount": "floating",
+      "config": {
+        "brands": [
+          "shopee",
+          "blibli",
+          "tiktok",
+          "lazada"
+        ]
+      }
+    }
+  ],
+  "campaigns": []
+}
