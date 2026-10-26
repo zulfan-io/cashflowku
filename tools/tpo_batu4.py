@@ -1,5 +1,5 @@
 import json,os
-prod={"status ":True,"data ":{"id ":2,"name ":"SG PBT Keycap Set","description ":"cut","weight ":"500 ","avg_rating ":"0 ","sold ":0,"images ":["demo-x "],"variations ":[],"models":[{"id ":5,"sku ":" ","price ":"24.9 ","stock ":43,"variation_index ":[0],"is_default ":False,"product_id ":2}]}}
+prod={"status ":True,"data ":{"id ":2,"shop_id":3,"name ":"SG PBT Keycap Set","description ":"cut","weight ":"500 ","avg_rating ":"0 ","sold ":0,"images ":["demo-x "],"variations ":[],"models":[{"id ":5,"sku ":" ","price ":"24.9 ","stock ":43,"variation_index ":[0],"is_default ":False,"product_id ":2}]}}
 lst={"status ":True,"data ":{"current_page ":1,"data":[{"id ":12,"name ":"Blackdot V200 Smartwatch","weight ":"300 ","avg_rating ":"0 ","sold ":0,"images ":["demo-y "],"variations ":[],"models":[{"id ":29,"sku ":" ","price ":"69 ","stock ":50,"variation_index ":[],"is_default ":False,"product_id ":12}]}],"last_page ":3,"total ":33,"per_page ":"12 ","next_page_url ":"http://x "}}
 shp={"status ":True,"data ":{"slug ":"shop-de ","name ":"Shop odede ","id ":1,"statistic":{"product_count ":100,"average_raiting ":"80 ","nonfulfilment_rate ":"12 "}}}
 fx={"product":prod,"list":lst,"shop":shp}

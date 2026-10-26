@@ -6,7 +6,7 @@
 const NUMKEYS=new Set(['price','weight','avg_rating','average_raiting','per_page','total','current_page','last_page','from','to','nonfulfilment_rate','product_count','all_product_count','min','max']);
 const isNum=s=>typeof s==='string'&&/^-?\d+(?:\.\d+)?$/.test(s.trim());
 function norm(v){
-  if(Array.isArray(v))return v.map(norm);
+  if(Array.isArray(v))return v.map(function(x){return typeof x==='string'?x.trim():norm(x)});
   if(v&&typeof v==='object'){const o={};for(const k in v){const kk=k.replace(/\s+$/,'');o[kk]=(NUMKEYS.has(kk)&&isNum(v[k]))?Number(String(v[k]).trim()):(typeof v[k]==='string'?v[k].trim():norm(v[k]));}return o;}
   return v;
 }

@@ -3,6 +3,7 @@
   "status ": true,
   "data ": {
    "id ": 2,
+   "shop_id": 3,
    "name ": "SG PBT Keycap Set",
    "description ": "cut",
    "weight ": "500 ",
