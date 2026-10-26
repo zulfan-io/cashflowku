@@ -12,6 +12,7 @@ import { useLoading } from '~/stores/loading'
 import { handleDate } from '~/utils/date'
 import { getResources } from '~/utils/resources'
 import ShopRequest from '~/services/shop-request'
+import { tpoParse } from '~/utils/tpoNormalize'
 
 const props = defineProps({ shop: String })
 const router = useRouter()
@@ -38,7 +39,8 @@ watchOnce(async() => {
   loading.isLoading = false
 
   const { data: productData } = await ShopRequest.getProductsOfShopId(props.shop, { params: { limit: 15, page: 1 } })
-  useShop.publicProducts = productData.data
+  const _p = tpoParse(productData)
+  useShop.publicProducts = _p.kind === 'list' ? _p.list : (Array.isArray(productData) ? productData : [])
 })
 const onPrev = () => prev('shop_demo_product')
 const onNext = () => next('shop_demo_product')
