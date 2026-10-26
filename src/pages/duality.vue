@@ -35,8 +35,20 @@ const slots = computed(() => {
   return out
 })
 
+// bottom-nav ala Shopee: ikon = TEKS ASCII placeholder, ganti 1 baris pas colok ~icons/carbon lo
+const tabs = [
+  { id: 'home', label: 'HOME', on: true },
+  { id: 'kat', label: 'KAT', on: false },
+  { id: 'game', label: 'GAME', on: false },
+  { id: 'notif', label: 'NOTIF', on: false },
+  { id: 'saya', label: 'SAYA', on: false }
+]
+
 function onSelect(p) {
   console.log('select', p.id, p.name)
+}
+function onTab(t) {
+  console.log('tab', t.id)
 }
 </script>
 
@@ -56,7 +68,16 @@ function onSelect(p) {
     </section>
 
     <main class="feed">
-      <CProductCardThin v-for="p in feed" :key="p.id" :product="p" @select="onSelect" />
+      <TransitionGroup name="rise">
+        <CProductCardThin
+          v-for="(p, i) in feed"
+          :key="p.id"
+          :product="p"
+          class="rise-item"
+          :style="{ transitionDelay: (i * 60) + 'ms' }"
+          @select="onSelect"
+        />
+      </TransitionGroup>
     </main>
 
     <aside class="dock">
@@ -67,6 +88,16 @@ function onSelect(p) {
       </div>
     </aside>
 
+    <nav class="botnav">
+      <button
+        v-for="t in tabs"
+        :key="t.id"
+        class="btab"
+        :class="{ act: t.on }"
+        @click="onTab(t)"
+      >{{ t.label }}</button>
+    </nav>
+
     <footer class="gate">
       Daftar member: <b>{{ capture }}</b> -> database berharga
     </footer>
@@ -74,23 +105,42 @@ function onSelect(p) {
 </template>
 
 <style scoped>
-.dual { max-width: 720px; margin: 0 auto; padding: 12px; font-family: system-ui, sans-serif; color: #1a1a1a; }
-.top { display: flex; align-items: baseline; gap: 8px; padding: 8px 0; border-bottom: 1px solid #eee; }
+.dual { max-width: 720px; margin: 0 auto; padding: 12px 12px 64px; font-family: system-ui, sans-serif; color: #1a1a1a; background: #f7f7f7; min-height: 100vh; }
+.top { display: flex; align-items: baseline; gap: 8px; padding: 8px 0; border-bottom: 1px solid #e6e6e6; }
 .logo { font-weight: 800; color: #FF6600; font-size: 20px; }
 .tag { font-size: 12px; color: #888; }
 .reward { margin: 10px 0; padding: 10px 12px; background: #FFF3E9; border-radius: 10px; font-size: 13px; }
-.chips { display: flex; gap: 6px; overflow-x: auto; padding: 6px 0; }
-.chip { flex: 0 0 auto; border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 5px 10px; font-size: 12px; cursor: pointer; transition: background .15s, border-color .15s; }
-.chip:hover { background: #FF6600; border-color: #FF6600; color: #fff; }
-.feed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0 96px; }
-.dock { position: fixed; right: 12px; bottom: 12px; width: 176px; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.chips { display: flex; gap: 6px; overflow-x: auto; padding: 6px 0; -webkit-overflow-scrolling: touch; }
+.chip { flex: 0 0 auto; border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 5px 10px; font-size: 12px; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
+.chip:active { background: #FF6600; border-color: #FF6600; color: #fff; }
+.feed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0 12px; }
+.rise-item { transition: opacity .35s ease, transform .35s ease; }
+.rise-enter-from { opacity: 0; transform: translateY(14px); }
+.rise-enter-to { opacity: 1; transform: none; }
+.dock { position: fixed; right: 12px; bottom: 64px; width: 176px; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.12); padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
 .slot { position: relative; background: #fafafa; border-radius: 10px; padding: 8px 2px; text-align: center; transition: background .15s; }
-.slot:hover { background: #FFF3E9; }
+.slot:active { background: #FFF3E9; }
 .slot.off { opacity: .5; }
 .ic { display: block; font-weight: 800; color: #FF6600; font-size: 13px; }
 .lb { display: block; font-size: 9px; color: #666; margin-top: 2px; }
 .soon { position: absolute; top: 2px; right: 2px; font-size: 7px; background: #FF6600; color: #fff; border-radius: 6px; padding: 1px 3px; }
-.gate { text-align: center; font-size: 12px; color: #666; padding: 10px; border-top: 1px solid #eee; }
+.botnav { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-around; background: #fff; border-top: 1px solid #e6e6e6; padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); z-index: 5; }
+.btab { flex: 1; border: 0; background: transparent; font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #888; padding: 4px 0; cursor: pointer; transition: color .15s; }
+.btab.act { color: #FF6600; }
+.gate { text-align: center; font-size: 12px; color: #666; padding: 10px; border-top: 1px solid #e6e6e6; }
 @media (min-width: 560px) { .feed { grid-template-columns: repeat(3, 1fr); } }
+@media (prefers-color-scheme: dark) {
+  .dual { color: #e8e8e8; background: #121212; }
+  .top, .gate { border-color: #2a2a2a; }
+  .tag { color: #999; }
+  .reward { background: #2a1d12; }
+  .chip { background: #1c1c1c; border-color: #333; color: #ddd; }
+  .dock { background: #1c1c1c; border-color: #2a2a2a; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+  .slot { background: #242424; }
+  .lb { color: #aaa; }
+  .botnav { background: #161616; border-color: #2a2a2a; }
+  .btab { color: #888; }
+  .btab.act { color: #FF6600; }
+}
 </style>
 
