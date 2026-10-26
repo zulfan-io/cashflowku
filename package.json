@@ -97,15 +97,7 @@
       "ignoreMissing": [
         "vite"
       ]
-    },
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "cypress",
-      "esbuild",
-      "swiper",
-      "vue-demi",
-      "vue-echarts"
-    ]
+    }
   },
   "vite": {
     "optimizeDeps": {}
