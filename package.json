@@ -19,6 +19,7 @@
   "license": "MIT",
   "author": "Thuong Truong <thuongtruong1009@proton.me>",
   "private": true,
+  "packageManager": "pnpm@7.33.7",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
