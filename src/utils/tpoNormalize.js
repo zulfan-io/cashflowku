@@ -7,13 +7,13 @@ const NUMKEYS=new Set(['price','weight','avg_rating','average_raiting','per_page
 const isNum=s=>typeof s==='string'&&/^-?\d+(?:\.\d+)?$/.test(s.trim());
 function norm(v){
   if(Array.isArray(v))return v.map(norm);
-  if(v&&typeof v==='object'){const o={};for(const k in v){const kk=k.replace(/\s+$/,'');o[kk]=(NUMKEYS.has(kk)&&isNum(v[k]))?Number(String(v[k]).trim()):norm(v[k]);}return o;}
+  if(v&&typeof v==='object'){const o={};for(const k in v){const kk=k.replace(/\s+$/,'');o[kk]=(NUMKEYS.has(kk)&&isNum(v[k]))?Number(String(v[k]).trim()):(typeof v[k]==='string'?v[k].trim():norm(v[k]));}return o;}
   return v;
 }
 function prod(p){
   const models=Array.isArray(p.models)?p.models:[];
   const prices=models.map(m=>Number(m.price)).filter(n=>!isNaN(n));
-  return{id:p.id,name:p.name,image:(p.images&&p.images[0])||null,sold:p.sold||0,rating:Number(p.avg_rating)||0,price:prices.length?Math.min.apply(null,prices):null,stock:models.reduce((a,m)=>a+(Number(m.stock)||0),0),variants:p.variations||[],models,wholesale:p.wholesale_prices||[]};
+  return{id:p.id,name:p.name,images:Array.isArray(p.images)?p.images:[],shop_id:p.shop_id||null,sold:p.sold||0,rating:Number(p.avg_rating)||0,price:prices.length?Math.min.apply(null,prices):null,stock:models.reduce((a,m)=>a+(Number(m.stock)||0),0),variants:p.variations||[],models,wholesale:p.wholesale_prices||[]};
 }
 export function tpoParse(raw){
   const env=norm(raw);const d=(env&&env.data!==undefined)?env.data:env;
