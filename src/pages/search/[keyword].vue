@@ -7,6 +7,7 @@ meta:
 import { keyword } from '~/stores/keyword'
 import { useLoading } from '~/stores/loading'
 import ProductRequest from '~/services/product-request'
+import { tpoParse } from '~/utils/tpoNormalize'
 
 const props = defineProps<{ keyword: string }>()
 const router = useRouter()
@@ -36,7 +37,8 @@ onMounted(() => {
 watch(async() => {
   loading.isLoading = true
   const { data: searchData } = await ProductRequest.searchProducts({ params: { limit: payload.limit, page: payload.page, keyword: payload.keyword, order_by: payload.order_by, filter: payload.filter } })
-  useKeyword.resultProduct = searchData.data
+  const _k = tpoParse(searchData)
+  useKeyword.resultProduct = _k.kind === 'list' ? _k.list : []
   loading.isLoading = false
 })
 // get props keyword from store after search
