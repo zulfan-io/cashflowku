@@ -98,3 +98,9 @@ function register(el, fn){ if(reduce) return; reg.set(el, fn); if(!raf) raf = re
 - $health = vonis kondisi rumah SEKARANG (vite hidup? git sinkron? uncommitted berapa?). Lo nggak perlu nanya asisten "web sehat ga" -> ketik `health`, disk yang jawab.
 - Kondisi Terkini (snapshot ronde ini): fix ranjau vitest = KE-GIT (77f660a) -> cold-start nggak bisa bikin hitam lagi. health.sh + sun-poc + peta = KE-GIT (8b051fd). vite sesi codespace ini MATI karena restart (NORMAL, tinggal start, bukan benerin).
 - Dosa yang dipetain: asisten 5x salah hipotesis karena megang peta di CHAT (volatile). Ronde ini pindah ke DISK (persistent). Mulai sekarang: update §0/§6 DI FILE ini sebelum ngapa-ngapain, bukan di kepala.
+
+
+----- ✅ SELESAI (csttan.md) -----
+  ✅ GUNUNG 1: skema AffiliateOffer TS (19 field, doc ACCESSTRADE telanjang) - 27c093f
+  ✅ GUNUNG 2 part1: fixture promos.json + kartu Agoda + tombol KLAIM noopener - 74bdc11
+  ✅ GUNUNG 1.5 b1+b4: adapter tpoNormalize (norm-envelope-before-dot, unknown->product) + fixture 3 shape + runner - cc8e3f5
