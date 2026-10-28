@@ -51,7 +51,8 @@
     "vue-toasted": "^1.1.28",
     "vue3-carousel": "^0.1.38",
     "vue3-charts": "^1.1.31",
-    "vueperslides": "^3.3.2"
+    "vueperslides": "^3.3.2",
+    "workbox-window": "^7.4.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.14.2",
