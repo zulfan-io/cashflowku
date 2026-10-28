@@ -1,0 +1,42 @@
+=== TRACE GRAPH (sambungan antar-file) ===
+nodes=296 edges_internal=384 broken=0 yatim=79 cycles=0
+alias aktif: ~->src, @->src  (cek vite.config lo, beda? run --alias)
+--- [XX] PUTUS (import ke file yang TIDAK ADA) ---
+  [OK] nihil
+--- [!!] YATIM (nggak di-import siapa-siapa, di luar entry) ---
+  src/layouts/seller/LSDashBoard.vue
+  src/pages/[...all].vue
+  src/modules/i18n.ts
+  src/shims.d.ts
+  src/layouts/admin/account/LAReset.vue
+  src/pages/seller/home.vue
+  src/schema/catalog.ts
+  src/pages/buyer/order/[order].vue
+  src/pages/about.vue
+  src/layouts/LContact.vue
+  src/layouts/LSitemap.vue
+  src/pages/seller/shop/preview.vue
+  src/layouts/buyer/LBReset.vue
+  src/layouts/404.vue
+  src/layouts/admin/LALogin.vue
+  src/components/buyer/CGiftCards.vue
+  src/pages/seller/shop/profile.vue
+  src/layouts/seller/shop/LSShopPublic.vue
+  src/pages/buyer/favourite.vue
+  src/layouts/buyer/LBProductDetails.vue
+  src/layouts/seller/LSRegister.vue
+  src/pages/buyer/account/download.vue
+  src/js/main.js
+  src/pages/buyer/login.vue
+  src/pages/shop/[shop].vue
+  src/pages/seller/product/category.vue
+  src/pages/seller/product/new.vue
+  src/pages/sitemap.vue
+  src/shared/brands.ts
+  src/layouts/buyer/LBLogin.vue
+  ... +49 lagi
+--- [!!] SIKLUS (A->B->A, ranjau bundler) ---
+  [OK] nihil
+--- [??] EXTERNAL/UNRESOLVED (bare specifier, mungkin alias belum di-set) ---
+  @vueuse/core, @vueuse/head, axios, echarts/charts, echarts/components, echarts/core, echarts/renderers, fs, nprogress, pinia, query-string, swiper/css, swiper/vue, virtual:generated-layouts, virtual:generated-pages, virtual:pwa-register, virtual:windi-base.css, virtual:windi-components.css, virtual:windi-devtools, virtual:windi-utilities.css, vite-ssg, vitest, vue, vue-echarts, vue-i18n, vue-router, vue3-charts, vueperslides, vueperslides/dist/vueperslides.css, ~icons/carbon/dicom-overlay, ~icons/carbon/language, ~icons/carbon/moon, ~icons/carbon/sun, ~icons/carbon/warning
+=== BATAS: trace ini STATIS. Dynamic-import-by-var, event-bus, provide/inject, pinia-cross-ref, python-tools TIDAK keliatan. ===
