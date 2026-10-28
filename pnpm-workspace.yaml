@@ -5,3 +5,9 @@ allowBuilds:
   swiper: true
   vue-demi: true
   vue-echarts: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - swiper
+  - vue-demi
+  - vue-echarts
