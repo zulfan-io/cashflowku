@@ -4,6 +4,9 @@ meta:
 </route>
 
 <script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+router.replace('/duality')
 useHead({
   title: 'shoper | welcome',
 })
