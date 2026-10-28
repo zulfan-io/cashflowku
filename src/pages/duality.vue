@@ -87,10 +87,6 @@ function onTab(t) {
       <span class="badge" :class="src">{{ src }}</span>
     </header>
 
-    <section v-if="pulsaOn" class="reward">
-      Main game -> kumpulin poin -> <b>pulsa gratis</b> dari owner
-    </section>
-
     <section class="chips">
       <button v-for="b in chips" :key="b" class="chip">{{ b }}</button>
     </section>
@@ -115,6 +111,10 @@ function onTab(t) {
         />
       </TransitionGroup>
     </main>
+
+    <section v-if="pulsaOn" class="reward">
+      Main game -> kumpulin poin -> <b>pulsa gratis</b> dari owner
+    </section>
 
     <nav class="botnav">
       <button
@@ -144,12 +144,15 @@ function onTab(t) {
 .chips { display: flex; gap: 6px; overflow-x: auto; padding: 6px 0; -webkit-overflow-scrolling: touch; }
 .chip { flex: 0 0 auto; border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 5px 10px; font-size: 12px; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
 .chip:active { background: #FF6600; border-color: #FF6600; color: #fff; }
-.feed { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 10px 0 12px; }
+.feed { display: flex; gap: 12px; margin: 10px 0 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.feed::-webkit-scrollbar { display: none; }
+.feed > * { flex: 0 0 auto; width: min(46vw, 200px); scroll-snap-align: start; }
 .rise-item { transition: opacity .35s ease, transform .35s ease; }
 .rise-enter-from { opacity: 0; transform: translateY(14px); }
 .rise-enter-to { opacity: 1; transform: none; }
-.dock { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; margin: 10px 0; }
-.slot { position: relative; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 14px 4px 10px; text-align: center; transition: background .15s, transform .15s; }
+.dock { display: flex; gap: 8px; margin: 10px 0; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.dock::-webkit-scrollbar { display: none; }
+.slot { position: relative; flex: 0 0 auto; width: 84px; scroll-snap-align: start; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 14px 4px 10px; text-align: center; transition: background .15s, transform .15s; }
 .slot:active { background: #FFF3E9; }
 .slot.off { opacity: .5; }
 .ic { display: block; font-weight: 800; color: #FF6600; font-size: 18px; line-height: 1.1; }
