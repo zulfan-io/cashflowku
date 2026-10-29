@@ -36,6 +36,9 @@ function mapOffer(o) {
 }
 const feed = ref(placeholderFeed())
 const src = ref('demo')
+const rowLabels = ['Rekomendasi Untukmu', 'Produk Terlaris', 'Flash Sale', 'Baru Datang']
+const feedAll = computed(() => { const f = feed.value; return f.length >= 15 ? f : [...f, ...f, ...f] })
+const feedRows = computed(() => { const out = []; for (let i = 0; i < feedAll.value.length; i += 5) out.push(feedAll.value.slice(i, i + 5)); return out })
 onMounted(async () => {
   try {
     const { data, error } = await supabase
@@ -113,22 +116,21 @@ function onTab(t) {
       </div>
     </aside>
 
-    <main class="feed">
-      <TransitionGroup name="rise">
+    <section v-for="(row, ri) in feedRows" :key="ri" class="feedrow">
+      <div class="lbl">{{ rowLabels[ri] || 'Rekomendasi' }}</div>
+      <main class="feed">
         <CProductCardThin
-          v-for="(p, i) in feed"
-          :key="p.id"
+          v-for="p in row"
+          :key="p.id + '-' + ri"
           :product="p"
-          class="rise-item"
-          :style="{ transitionDelay: (i * 60) + 'ms' }"
           @select="onSelect"
           @love="onLove"
           @share="onShare"
           :love-count="loveCounts[p.id] || 0"
           :share-count="shareCounts[p.id] || 0"
         />
-      </TransitionGroup>
-    </main>
+      </main>
+    </section>
 
     <section v-if="pulsaOn" class="reward">
       Main game -> kumpulin poin -> <b>pulsa gratis</b> dari owner
@@ -162,19 +164,22 @@ function onTab(t) {
 .chips { display: flex; gap: 6px; overflow-x: auto; padding: 6px 0; -webkit-overflow-scrolling: touch; }
 .chip { flex: 0 0 auto; border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 5px 10px; font-size: 12px; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
 .chip:active { background: #FF7A45; border-color: #FF7A45; color: #fff; }
-.feed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0 12px; }
-@media (min-width: 640px) { .feed { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; } }
+.feedrow { margin: 8px 0; }
+.feedrow .lbl { font-size: 13px; font-weight: 700; color: #1a1a1a; padding: 0 2px 4px; }
+.feed { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin: 4px 0; }
+.feed::-webkit-scrollbar { display: none; }
+.feed > * { flex: 0 0 auto; width: 30vw; max-width: 150px; scroll-snap-align: start; }
 .rise-item { transition: opacity .35s ease, transform .35s ease; }
 .rise-enter-from { opacity: 0; transform: translateY(14px); }
 .rise-enter-to { opacity: 1; transform: none; }
-.dock { display: grid; grid-template-rows: repeat(2, auto); grid-auto-flow: column; grid-auto-columns: 84px; gap: 8px; margin: 10px calc(-1 * clamp(12px, 3vw, 32px)); padding-inline: clamp(12px, 3vw, 32px); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.dock { display: grid; grid-template-rows: repeat(2, auto); grid-auto-flow: column; grid-auto-columns: 52px; gap: 6px; margin: 8px calc(-1 * clamp(12px, 3vw, 32px)); padding-inline: clamp(12px, 3vw, 32px); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .dock::-webkit-scrollbar { display: none; }
 .dock > * { scroll-snap-align: start; }
-.slot { position: relative; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 14px 4px 10px; text-align: center; transition: background .15s, transform .15s; }
+.slot { position: relative; background: transparent; border: 0; border-radius: 12px; padding: 6px 2px; text-align: center; transition: background .15s, transform .15s; }
 .slot:active { background: #FFF3E9; }
 .slot.off { opacity: .5; }
-.ic { display: block; font-weight: 800; color: #FF7A45; font-size: 18px; line-height: 1.1; }
-.lb { display: block; font-size: 10px; color: #666; margin-top: 4px; }
+.ic { display: block; font-weight: 800; color: #FF7A45; font-size: 13px; line-height: 1.1; }
+.lb { display: block; font-size: 9px; color: #666; margin-top: 2px; }
 .soon { position: absolute; top: 2px; right: 2px; font-size: 7px; background: #FF7A45; color: #fff; border-radius: 6px; padding: 1px 3px; }
 .botnav { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-around; background: #fff; border-top: 1px solid #e6e6e6; padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); z-index: 5; }
 .btab { flex: 1; border: 0; background: transparent; font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #888; padding: 4px 0; cursor: pointer; transition: color .15s; }
