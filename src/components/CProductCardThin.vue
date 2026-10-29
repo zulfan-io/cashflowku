@@ -22,7 +22,7 @@ const out = computed(() => (props.product.stock || 0) <= 0)
   <article class="thin" @click="emit('select', props.product)">
     <div class="ph">
       <img v-if="props.product.image" :src="props.product.image" :alt="props.product.name" />
-      <span v-else class="ph-t">foto</span>
+      <img v-else :src="'https://picsum.photos/seed/shoper-' + props.product.id + '/400/400'" alt="" loading="lazy" />
       <span v-if="out" class="badge">Habis</span>
     </div>
     <div class="body">
