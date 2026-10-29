@@ -61,3 +61,26 @@
 - SETTINGAN: sistem port siap-panggil, klien klik kayak production besar (shopee/lazada).
 - STATUS JUJUR: manifest = REL KOSONG. DOM BELUM KEBUKTI (build 1m41s belum green). Platform-free: menang di CF/Netlify/apa pun, tinggal colok.
 
+## GUNUNG 8 — SOSMED COMMERCE (2 demo · ramu Coi 13:00)
+> Yin-yang Coi: → commerce berjiwa social. 2 demo = 2 sisi sumbu, BUKAN 2 rasa beda.
+
+### DEMO 1 — SOCIAL COMMERCE (/sc1) · panggung = orang
+- ☐ hero = rail story bulat (24 jam, wajah/preview) → feed post orang, produk numpang di dalam post
+- ☐ navbar ikon-saja (Instagram): aktif filled, notif = titik merah
+- ☐ dot posisi carousel · ☐ love/share = verb utama post
+
+### DEMO 2 — COMMERCE SOCIAL MEDIA (/sc2) · panggung = barang, berbahasa tenang
+- ☐ hero = katalog produk (baris duality) → tiap card dipakaikan furniture social
+- ☐ seller story-circle di card · → ☐ ☑ backend story 24 jam SUDAH ADA (shoper_status.expires_at + RLS)
+- ☐ navbar ikon+label (Duolicious) · → ☐ dot posisi + notif titik hidup di sini juga
+
+### PRIMITIF SHARED (dipakai 2 demo, 1 sumber truth)
+- ☐ StoryCircle.vue · bulat, wajah/preview, tap → story 24 jam (frontend BELUM dibangun)
+- ☐ Dots.vue · indikator posisi carousel
+- ☐ NotifDot.vue · titik merah, bukan teks
+- ☑ backend story = shoper_status (expires_at now()+1day, RLS > now(), purge) · SUDAH jadi di DB
+
+### ATURAN RAMU
+- ☐ 2 demo NOL nyentuh duality.vue / list.vue yang udah hidup · file baru /sc1 /sc2
+- ☐ yin-yang = KOMPOSISI primitif, bukan CSS baru · rasa tenang dijaga di 2 sisi
+- ☐ gate Coi: acc split sc1/sc2 di atas → bilang "gas sc" → AI tulis 2 page + 3 primitif dari byte
