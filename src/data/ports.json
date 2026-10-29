@@ -4,7 +4,7 @@
     "dual": true,
     "feed_bottom": "affiliate_card",
     "floating": "widget_grid",
-    "floating_max_slots": 8
+    "floating_max_slots": 12
   },
   "reward": {
     "pulsa_on_points": true,

@@ -172,13 +172,13 @@ function onTab(t) {
 .rise-item { transition: opacity .35s ease, transform .35s ease; }
 .rise-enter-from { opacity: 0; transform: translateY(14px); }
 .rise-enter-to { opacity: 1; transform: none; }
-.dock { display: grid; grid-template-rows: repeat(2, auto); grid-auto-flow: column; grid-auto-columns: 52px; gap: 6px; margin: 8px calc(-1 * clamp(12px, 3vw, 32px)); padding-inline: clamp(12px, 3vw, 32px); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.dock { display: grid; grid-template-rows: repeat(2, auto); grid-auto-flow: column; grid-auto-columns: 56px; gap: 6px; margin: 8px calc(-1 * clamp(12px, 3vw, 32px)); padding-inline: clamp(12px, 3vw, 32px); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .dock::-webkit-scrollbar { display: none; }
 .dock > * { scroll-snap-align: start; }
-.slot { position: relative; background: transparent; border: 0; border-radius: 12px; padding: 6px 2px; text-align: center; transition: background .15s, transform .15s; }
+.slot { position: relative; background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 8px 2px; text-align: center; transition: background .15s, transform .15s; }
 .slot:active { background: #FFF3E9; }
 .slot.off { opacity: .5; }
-.ic { display: block; font-weight: 800; color: #FF7A45; font-size: 13px; line-height: 1.1; }
+.ic { display: block; font-weight: 800; color: #FF7A45; font-size: 15px; line-height: 1.1; }
 .lb { display: block; font-size: 9px; color: #666; margin-top: 2px; }
 .soon { position: absolute; top: 2px; right: 2px; font-size: 7px; background: #FF7A45; color: #fff; border-radius: 6px; padding: 1px 3px; }
 .botnav { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-around; background: #fff; border-top: 1px solid #e6e6e6; padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); z-index: 5; }
