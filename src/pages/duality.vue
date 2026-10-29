@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { supabase } from '~/utils/supabase'
+import { useRouter } from 'vue-router'
 import type { Product } from '~/schema/catalog'
 import CProductCardThin from '~/components/CProductCardThin.vue'
 import manifest from '~/data/ports.json'
@@ -74,6 +75,7 @@ const tabs = [
   { id: 'saya', label: 'SAYA', on: false }
 ]
 
+const router = useRouter()
 const loveCounts = ref({})
 const shareCounts = ref({})
 async function onLove(p) {
@@ -89,7 +91,7 @@ async function onShare(p) {
   if (!error) shareCounts.value[p.id] = (shareCounts.value[p.id] || 0) + 1
 }
 function onSelect(p) {
-  console.log('select', p.id, p.name)
+  router.push('/list')
 }
 function onTab(t) {
   console.log('tab', t.id)
