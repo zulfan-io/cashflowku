@@ -9,7 +9,7 @@ const faces = ['A','B','C','D','E','F']
   <div class="pv">
     <h2 class="pv-h">Rail Story (24 jam, bulat = wajah)</h2>
     <div class="pv-rail">
-      <StoryCircle v-for="(f, i) in faces" :key="f" :label="f" :read="i < 2" :size="60" @open="() => {}" />
+      <StoryCircle v-for="(f, i) in faces" :key="f" :label="f" :src="'https://picsum.photos/seed/scface-' + f + '/120/120'" :read="i < 2" :size="60" @open="() => {}" />
     </div>
     <p class="pv-note">2 pertama = sudah dilihat (ring abu). Sisanya unread (ring coral).</p>
 
