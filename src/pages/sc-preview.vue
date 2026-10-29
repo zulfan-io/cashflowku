@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import StoryCircle from '~/components/StoryCircle.vue'
 import Dots from '~/components/Dots.vue'
 import NotifDot from '~/components/NotifDot.vue'

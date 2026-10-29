@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 const props = defineProps<{ src?: string | null; label?: string; read?: boolean; size?: number }>()
 const emit = defineEmits<{ (e: 'open'): void }>()
