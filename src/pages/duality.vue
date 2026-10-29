@@ -54,6 +54,7 @@ onMounted(async () => {
   } catch (e) {}
 })
 
+const storyFaces = ['A','B','C','D','E','F','G']
 const chips = Object.values(brands).slice(0, 12)
 const capture = manifest.reward.capture.join(' + ')
 const pulsaOn = manifest.reward.pulsa_on_points
@@ -106,6 +107,9 @@ function onTab(t) {
       <span class="badge" :class="src">{{ src }}</span>
     </header>
 
+    <div class="storyrail">
+      <StoryCircle v-for="(f, i) in storyFaces" :key="f" :label="f" :src="'https://picsum.photos/seed/dstory-' + f + '/120/120'" :read="i < 1" :size="54" ring="#0095F6" />
+    </div>
     <section class="chips">
       <button v-for="b in chips" :key="b" class="chip">{{ b }}</button>
     </section>
@@ -187,5 +191,7 @@ function onTab(t) {
 .btab { flex: 1; border: 0; background: transparent; font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #888; padding: 4px 0; cursor: pointer; transition: color .15s; }
 .btab.act { color: #FF7A45; }
 .gate { text-align: center; font-size: 12px; color: #666; padding: 10px; border-top: 1px solid #e6e6e6; }
+.storyrail { display: flex; gap: 10px; overflow-x: auto; padding: 10px clamp(12px,3vw,32px); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.storyrail::-webkit-scrollbar { display: none; }
 </style>
 

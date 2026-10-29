@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-const props = defineProps<{ src?: string | null; label?: string; read?: boolean; size?: number }>()
+const props = defineProps<{ src?: string | null; label?: string; read?: boolean; size?: number; ring?: string }>()
 const emit = defineEmits<{ (e: 'open'): void }>()
 const s = computed(() => props.size || 56)
 const ini = computed(() => (props.label || '?').slice(0, 1).toUpperCase())
@@ -8,7 +8,7 @@ const ini = computed(() => (props.label || '?').slice(0, 1).toUpperCase())
 
 <template>
   <button class="sc-wrap" :style="{ width: s + 'px', height: s + 'px' }" :class="{ read }" @click="emit('open')">
-    <span class="sc-ring" :style="{ width: s + 'px', height: s + 'px' }">
+    <span class="sc-ring" :style="{ width: s + 'px', height: s + 'px', borderColor: ring || undefined }">
       <img v-if="src" class="sc-img" :src="src" alt="" />
       <span v-else class="sc-ini">{{ ini }}</span>
     </span>
