@@ -65,6 +65,16 @@
           "lazada"
         ]
       }
+    },
+    {
+      "id": "drama",
+      "kind": "drama",
+      "enabled": false,
+      "mount": "floating",
+      "config": {
+        "provider": "",
+        "window": "scroll_down"
+      }
     }
   ],
   "campaigns": []
