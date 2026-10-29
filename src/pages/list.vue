@@ -31,13 +31,31 @@ async function onShare(p) {
 }
 function onSelect(p) { console.log('detail soon', p.id) }
 
+const NAMES = ['Kemeja Flanel Oversize','Celana Kargo Dewasa','Hoodie Fleece Premium','Sepatu Sneakers Retro','Tas Ransel Anti Air','Jam Tangan Digital Sport','Jaket Denim Klasik','Sandal Kulit Pria']
+const PRICES = [89000,120000,135000,199000,159000,75000,210000,99000]
+function dummyBatch(from) {
+  const out = []
+  for (let i = 0; i < PAGE; i++) {
+    const n = from + i
+    out.push(mapOffer({ id: n + 1, title: NAMES[n % NAMES.length], image_url: 'https://picsum.photos/seed/shoper-list-' + n + '/400/400', price: PRICES[n % PRICES.length] }))
+  }
+  return out
+}
+
 async function loadBatch() {
   if (loading.value || done.value) return
   loading.value = true
   const from = items.value.length
   const { data, error } = await supabase.from('shoper_offers').select('*').eq('active', true).range(from, from + PAGE - 1)
   loading.value = false
-  if (error || !data || !data.length) { done.value = true; return }
+  if (error || !data || !data.length) {
+    if (items.value.length < CAP) {
+      items.value = items.value.concat(dummyBatch(from))
+      if (items.value.length >= CAP) done.value = true
+      return
+    }
+    done.value = true; return
+  }
   items.value = items.value.concat(data.map(mapOffer))
   if (items.value.length >= CAP || data.length < PAGE) done.value = true
 }
