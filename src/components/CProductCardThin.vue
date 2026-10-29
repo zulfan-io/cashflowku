@@ -2,8 +2,8 @@
 import { computed } from 'vue'
 import type { Product } from '~/schema/catalog'
 
-const props = defineProps<{ product: Product }>()
-const emit = defineEmits<{ (e: 'select', p: Product): void }>()
+const props = defineProps<{ product: Product; loveCount?: number; shareCount?: number }>()
+const emit = defineEmits<{ (e: 'select', p: Product): void; (e: 'love', p: Product): void; (e: 'share', p: Product): void }>()
 
 const priceText = computed(() => {
   const p = props.product
@@ -32,6 +32,10 @@ const out = computed(() => (props.product.stock || 0) <= 0)
         <span class="rt">{{ (props.product.rating || 0).toFixed(1) }}</span>
         <span class="sd">{{ soldText }} terjual</span>
       </div>
+      <div class="act">
+        <button class="act-b" @click.stop="emit('love', props.product)">&#9825; {{ loveCount || 0 }}</button>
+        <button class="act-b" @click.stop="emit('share', props.product)">&#8618; {{ shareCount || 0 }}</button>
+      </div>
     </div>
   </article>
 </template>
@@ -45,9 +49,12 @@ const out = computed(() => (props.product.stock || 0) <= 0)
 .badge { position: absolute; top: 6px; left: 6px; background: rgba(0,0,0,.6); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 6px; }
 .body { padding: 8px; }
 .nm { font-size: 13px; font-weight: 600; line-height: 1.3; margin: 0 0 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.pr { font-size: 15px; color: #FF6600; font-weight: 800; margin: 0; }
+.pr { font-size: 15px; color: #FF7A45; font-weight: 800; margin: 0; }
 .mt { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
 .rt { font-size: 11px; color: #f5a623; font-weight: 700; }
 .sd { font-size: 11px; color: #888; }
+.act { display: flex; gap: 8px; margin-top: 6px; }
+.act-b { flex: 1; border: 1px solid #eee; background: #fafafa; border-radius: 8px; padding: 4px 0; font-size: 11px; color: #666; cursor: pointer; transition: background .15s, color .15s; }
+.act-b:active { background: #FFE9DF; color: #FF7A45; }
 </style>
 

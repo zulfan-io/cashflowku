@@ -71,6 +71,20 @@ const tabs = [
   { id: 'saya', label: 'SAYA', on: false }
 ]
 
+const loveCounts = ref({})
+const shareCounts = ref({})
+async function onLove(p) {
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) { console.log('login dulu buat love'); return }
+  const { data: mem } = await supabase.from('shoper_members').select('id').eq('user_id', user.id).single()
+  if (!mem) { console.log('belum jadi member'); return }
+  const { error } = await supabase.from('shoper_loves').insert({ member_id: mem.id, target_type: 'offer', target_id: String(p.id) })
+  if (!error) loveCounts.value[p.id] = (loveCounts.value[p.id] || 0) + 1
+}
+async function onShare(p) {
+  const { error } = await supabase.from('shoper_shares').insert({ target_type: 'offer', target_id: String(p.id), channel: 'app' })
+  if (!error) shareCounts.value[p.id] = (shareCounts.value[p.id] || 0) + 1
+}
 function onSelect(p) {
   console.log('select', p.id, p.name)
 }
@@ -108,6 +122,10 @@ function onTab(t) {
           class="rise-item"
           :style="{ transitionDelay: (i * 60) + 'ms' }"
           @select="onSelect"
+          @love="onLove"
+          @share="onShare"
+          :love-count="loveCounts[p.id] || 0"
+          :share-count="shareCounts[p.id] || 0"
         />
       </TransitionGroup>
     </main>
