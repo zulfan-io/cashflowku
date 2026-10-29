@@ -144,9 +144,8 @@ function onTab(t) {
 .chips { display: flex; gap: 6px; overflow-x: auto; padding: 6px 0; -webkit-overflow-scrolling: touch; }
 .chip { flex: 0 0 auto; border: 1px solid #ddd; background: #fff; border-radius: 999px; padding: 5px 10px; font-size: 12px; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
 .chip:active { background: #FF6600; border-color: #FF6600; color: #fff; }
-.feed { display: flex; gap: 12px; margin: 10px calc(-1 * clamp(12px, 3vw, 32px)) 12px; padding-inline: clamp(12px, 3vw, 32px); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-.feed::-webkit-scrollbar { display: none; }
-.feed > * { flex: 0 0 auto; width: min(30vw, 160px); scroll-snap-align: start; }
+.feed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0 12px; }
+@media (min-width: 640px) { .feed { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; } }
 .rise-item { transition: opacity .35s ease, transform .35s ease; }
 .rise-enter-from { opacity: 0; transform: translateY(14px); }
 .rise-enter-to { opacity: 1; transform: none; }
