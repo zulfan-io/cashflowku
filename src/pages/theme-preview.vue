@@ -1,17 +1,23 @@
 <!-- tuas -->
 <script setup lang="ts">
 import cfg from '~/data/icons.json'
-const files = import.meta.glob('../components/icons/*.vue', { eager: true }) as Record<string, { default: any }>
-function resolve(name: string) {
-  const key = Object.keys(files).find((k) => k.endsWith('/' + name + '.vue'))
-  return key ? files[key].default : null
-}
+import IHome from '~/components/icons/IHome.vue'
+import IShop from '~/components/icons/IShop.vue'
+import IApplication from '~/components/icons/IApplication.vue'
+import INotify from '~/components/icons/INotify.vue'
+import IAccount from '~/components/icons/IAccount.vue'
+import IStar from '~/components/icons/IStar.vue'
+import IHeart from '~/components/icons/IHeart.vue'
+import IBasket from '~/components/icons/IBasket.vue'
+import ITime from '~/components/icons/ITime.vue'
+const REG = { 'IHome': IHome, 'IShop': IShop, 'IApplication': IApplication, 'INotify': INotify, 'IAccount': IAccount, 'IStar': IStar, 'IHeart': IHeart, 'IBasket': IBasket, 'ITime': ITime }
+function resolve(name: string) { return REG[name] || null }
 const themes = (cfg as any).themes as Record<string, any>
 </script>
 
 <template>
   <div class="tw">
-    <div class="tw-note">TUAS tema. Tiap blok = 1 tema dari icons.json. Ganti palet/ikon di config = ganti tema, NOL nyentuh kode. Tengah = DIPILIH (naik+nyala), lain = DIAM (abu). Slot kosong = nama ikon NOL ada di folder (cek whitelist).</div>
+    <div class="tw-note">TUAS (import eksplisit, NOL glob/auto-import). Tiap blok = 1 tema dari icons.json. Tengah = DIPILIH (naik+nyala), lain = DIAM (abu). Merah = nama di config NOL ada file (cek menu waiter).</div>
     <div v-for="(t, tn) in themes" :key="tn" class="tw-card">
       <div class="tw-head"><span class="tw-name">{{ tn }}</span><span class="tw-desc">{{ t.desc }}</span></div>
       <div class="tw-row">
