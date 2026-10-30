@@ -1,4 +1,20 @@
 <script setup lang="ts">
+import IHome from '~/components/icons/IHome.vue'
+import IShop from '~/components/icons/IShop.vue'
+import IApplication from '~/components/icons/IApplication.vue'
+import INotify from '~/components/icons/INotify.vue'
+import IAccount from '~/components/icons/IAccount.vue'
+const BI_REG = { IHome, IShop, IApplication, INotify, IAccount }
+const BI_MAP: Record<string,string> = {"home": "IHome", "kat": "IShop", "game": "IApplication", "notif": "INotify", "saya": "IAccount"}
+const BI_CFG: Record<string,{lite:string;base:string;m:string}> = {'home':{lite:'#6EE7B7',base:'#10B981',m:"url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='1.2em' height='1.2em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'><path fill='currentColor' d='M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586l6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z' /></svg>\")"},'kat':{lite:'#9CC4FF',base:'#2F6BFF',m:"url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='1.2em' height='1.2em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'><g stroke-width='1.5' fill='none'><path d='M21.818 9.364l-1.694-5.929A.6.6 0 0 0 19.547 3H15.5l.475 5.704a.578.578 0 0 0 .278.45c.39.233 1.152.663 1.747.846c1.016.313 2.5.2 3.346.096a.57.57 0 0 0 .472-.732z' stroke='currentColor' /><path d='M14 10c.568-.175 1.288-.574 1.69-.812a.578.578 0 0 0 .28-.549L15.5 3h-7l-.47 5.639a.578.578 0 0 0 .28.55c.402.237 1.122.636 1.69.811c1.493.46 2.507.46 4 0z' stroke='currentColor' /><path d='M3.876 3.435l-1.694 5.93a.57.57 0 0 0 .472.73c.845.105 2.33.217 3.346-.095c.595-.183 1.358-.613 1.747-.845a.578.578 0 0 0 .278-.451L8.5 3H4.453a.6.6 0 0 0-.577.435z' stroke='currentColor' /><path d='M3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9' stroke='currentColor' /></g></svg>\")"},'game':{lite:'#C4B0FF',base:'#7C4DFF',m:"url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='1.2em' height='1.2em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 48 48'><path fill='currentColor' d='M10 14a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm14 0a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm14 0a4 4 0 1 0 0-8a4 4 0 0 0 0 8ZM10 28a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm14 0a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm14 0a4 4 0 1 0 0-8a4 4 0 0 0 0 8ZM10 42a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm14 0a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm14 0a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z' /></svg>\")"},'notif':{lite:'#FFE0A3',base:'#FFB300',m:"url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 32 32'><path fill='currentColor' d='M26 16.586V14h-2v3a1 1 0 0 0 .293.707L27 20.414V22H5v-1.586l2.707-2.707A1 1 0 0 0 8 17v-4a7.985 7.985 0 0 1 12-6.918V3.847a9.896 9.896 0 0 0-3-.796V1h-2v2.05A10.014 10.014 0 0 0 6 13v3.586l-2.707 2.707A1 1 0 0 0 3 20v3a1 1 0 0 0 1 1h7v1a5 5 0 0 0 10 0v-1h7a1 1 0 0 0 1-1v-3a1 1 0 0 0-.293-.707ZM19 25a3 3 0 0 1-6 0v-1h6Z' /><circle cx='26' cy='8' r='4' fill='currentColor' /></svg>\")"},'saya':{lite:'#A7F3D9',base:'#00B894',m:"url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='1.4em' height='1.4em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'><path fill='currentColor' d='M16.5 12c1.38 0 2.49-1.12 2.49-2.5S17.88 7 16.5 7a2.5 2.5 0 0 0 0 5zM9 11c1.66 0 2.99-1.34 2.99-3S10.66 5 9 5S6 6.34 6 8s1.34 3 3 3zm7.5 3c-1.83 0-5.5.92-5.5 2.75V18c0 .55.45 1 1 1h9c.55 0 1-.45 1-1v-1.25c0-1.83-3.67-2.75-5.5-2.75zM9 13c-2.33 0-7 1.17-7 3.5V18c0 .55.45 1 1 1h6v-2.25c0-.85.33-2.34 2.37-3.47C10.5 13.1 9.66 13 9 13z' /></svg>\")"},}
+const BI_IDLE = "#9a9a9a"
+function biStyle(t: any) {
+  const nm = BI_MAP[t.id]; const s = BI_CFG[t.id]
+  if (!nm || !s) return {}
+  const on = !!t.on
+  return { '--m': s.m, '--lite': on ? s.lite : BI_IDLE, '--base': on ? s.base : BI_IDLE, color: on ? s.base : BI_IDLE }
+}
+
 import { ref, computed, onMounted } from 'vue'
 import { supabase } from '~/utils/supabase'
 import { useRouter } from 'vue-router'
@@ -149,7 +165,7 @@ function onTab(t) {
         class="btab"
         :class="{ act: t.on }"
         @click="onTab(t)"
-      >{{ t.label }}</button>
+      ><span class="bi" :style="biStyle(t)"></span></button>
     </nav>
 
     <footer class="gate">
@@ -193,5 +209,9 @@ function onTab(t) {
 .gate { text-align: center; font-size: 12px; color: #666; padding: 10px; border-top: 1px solid #e6e6e6; }
 .storyrail { display: flex; gap: 10px; overflow-x: auto; padding: 10px clamp(12px,3vw,32px); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .storyrail::-webkit-scrollbar { display: none; }
+
+.bi { display: inline-flex; width: 24px; height: 24px; -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; background: linear-gradient(180deg, var(--lite), var(--base)); transition: transform .26s cubic-bezier(.34,1.56,.64,1), filter .22s, opacity .2s; }
+.btab:not(.act) .bi { opacity: .55; }
+.btab.act .bi { transform: translateY(-2px) scale(1.12); filter: drop-shadow(0 4px 8px currentColor); }
 </style>
 
