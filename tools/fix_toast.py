@@ -1,0 +1,15 @@
+import re,sys,subprocess
+r=subprocess.run(['grep','-rlE',r'const useToast[ \t]*=[ \t]*toast\(\)','src','--include=*.ts','--include=*.vue'],capture_output=True,text=True)
+files=[f for f in r.stdout.split() if f]
+if len(files)==0: print('GUARD: pola NOL ketemu -> paste: grep -rn "toast()" src'); sys.exit(1)
+if len(files)>1: print('GUARD: multi-file %r -> paste list'%files); sys.exit(1)
+P=files[0]; s=open(P,encoding='utf-8').read()
+if re.search(r'export[^\n]*\buseToast\b', s): print('GUARD: useToast di-EXPORT di %s -> paste cat %s'%(P,P)); sys.exit(1)
+s2=re.sub(r'(?m)^[ \t]*const useToast[ \t]*=[ \t]*toast\(\)[ \t]*;?[ \t]*\n','',s)
+s2=s2.replace('useToast.updateToast','toast().updateToast')
+if 'useToast' in s2: print('GUARD: sisa useToast -> paste cat %s'%P); sys.exit(1)
+if s2==s: print('SKIP idempotent'); sys.exit(0)
+open(P,'w',encoding='utf-8',newline='\n').write(s2)
+print('PATCH OK file=%s'%P)
+print('--- git diff (LO LIAT, GUE BELUM COMMIT) ---')
+print(subprocess.run(['git','diff','--',P],capture_output=True,text=True).stdout)
