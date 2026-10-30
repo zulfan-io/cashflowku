@@ -20,7 +20,8 @@ import PkgConfig from 'vite-plugin-package-config'
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
 export default defineConfig({
-  ssr: { noExternal: [/^swiper(\/|$)/] },
+  ssr: { noExternal: true },
+
 
 
   resolve: {
