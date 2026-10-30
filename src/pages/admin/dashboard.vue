@@ -77,11 +77,11 @@ const option = ref({
   ],
 })
 const myTimeout = setTimeout(() => {
-  const modalCongrate = document.getElementById('modalPopup')
-  modalCongrate.style.transform = 'translateX(20rem)'
+  const modalCongrate = typeof document !== 'undefined' ? document.getElementById('modalPopup') : null
+  if (modalCongrate) modalCongrate.style.transform = 'translateX(20rem)'
   const myTimeout = setTimeout(() => {
-    modalCongrate.style.opacity = 0
-    modalCongrate.style.display = 'none'
+    if (modalCongrate) modalCongrate.style.opacity = 0
+    if (modalCongrate) modalCongrate.style.display = 'none'
   }, 1000)
 }, 5000)
 
