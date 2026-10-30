@@ -15,12 +15,12 @@ const AxiosInstance = axios.create({
 })
 AxiosInstance.interceptors.request.use(
   async(request) => {
-    const token = localStorage.getItem('token')
+    const token = typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null
     request.headers.Authorization = token ? `Bearer ${token}` : ''
     return request
   },
   (error) => {
-    toast().updateToast('error', error.response.statusText, true)
+    toast().updateToast('error', (error?.response?.statusText) ?? 'request failed', true)
     return Promise.reject(error)
   },
 )
@@ -33,7 +33,7 @@ AxiosInstance.interceptors.response.use(
   },
   (error) => {
     // console.error(error.response);
-    toast().updateToast('error', `Error: ${error.response.data.message}. Try again!`, true)
+    toast().updateToast('error', `Error: ${(error?.response?.data?.message) ?? 'network'}. Try again!`, true)
     return Promise.reject(error)
   },
 )
