@@ -1,0 +1,59 @@
+{
+  "_note": "TUAS tema shoper. Ganti palet/ikon di sini = ganti tema, NOL nyentuh kode. Nama ikon HARUS ada di src/components/icons/. Lapis4 (server) nyusul.",
+  "themes": {
+    "navbar-permen": {
+      "desc": "navbar utama: hidup, warna-warni, candy",
+      "idle": "#9a9a9a",
+      "icons": [
+        "IHome",
+        "IShop",
+        "IApplication",
+        "INotify",
+        "IAccount"
+      ],
+      "palette": [
+        "#FF6A2B",
+        "#2F6BFF",
+        "#7C4DFF",
+        "#FFB300",
+        "#00B894"
+      ]
+    },
+    "toko-elegan": {
+      "desc": "toko/affiliate: tenang, monokrom restrained ala IG",
+      "idle": "#cbd5e1",
+      "icons": [
+        "IHome",
+        "IShop",
+        "IApplication",
+        "INotify",
+        "IAccount"
+      ],
+      "palette": [
+        "#111827",
+        "#475569",
+        "#6B7280",
+        "#78716C",
+        "#52525B"
+      ]
+    },
+    "widget-serius": {
+      "desc": "widget kategori affiliate: tegas, warna fungsi",
+      "idle": "#94a3b8",
+      "icons": [
+        "IStar",
+        "IHeart",
+        "IBasket",
+        "IApplication",
+        "ITime"
+      ],
+      "palette": [
+        "#0D9488",
+        "#E11D48",
+        "#D97706",
+        "#4F46E5",
+        "#0284C7"
+      ]
+    }
+  }
+}
