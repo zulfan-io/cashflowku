@@ -20,6 +20,9 @@ import PkgConfig from 'vite-plugin-package-config'
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
 export default defineConfig({
+  ssr: { noExternal: [/^swiper(\/|$)/] },
+
+
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
@@ -179,7 +182,7 @@ export default defineConfig({
     ],
     exclude: [
       'vue-demi',
-    
+
       'local-pkg',
       'vitest',
     ],
