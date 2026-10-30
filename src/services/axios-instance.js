@@ -2,7 +2,6 @@ import queryString from 'query-string'
 import axios from 'axios'
 import { toast } from '../stores/toast'
 
-const useToast = toast()
 
 const AxiosInstance = axios.create({
   baseURL: `${import.meta.env.VITE_BASE_DOMAIN}/api/v2`,
@@ -21,7 +20,7 @@ AxiosInstance.interceptors.request.use(
     return request
   },
   (error) => {
-    useToast.updateToast('error', error.response.statusText, true)
+    toast().updateToast('error', error.response.statusText, true)
     return Promise.reject(error)
   },
 )
@@ -34,7 +33,7 @@ AxiosInstance.interceptors.response.use(
   },
   (error) => {
     // console.error(error.response);
-    useToast.updateToast('error', `Error: ${error.response.data.message}. Try again!`, true)
+    toast().updateToast('error', `Error: ${error.response.data.message}. Try again!`, true)
     return Promise.reject(error)
   },
 )
