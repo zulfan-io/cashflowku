@@ -3,6 +3,7 @@ import { useLoading } from '~/stores/loading'
 
 const loading = useLoading()
 onMounted(() => {
+  window.addEventListener('scroll', scrollFunction)
   window.onload = () => {
     document.body.scrollTop = document.documentElement.scrollTop = 0
   }
@@ -27,7 +28,6 @@ const scrollFunction = () => {
   else
     isScroll.value = false
 }
-window.addEventListener('scroll', scrollFunction)
 
 </script>
 
